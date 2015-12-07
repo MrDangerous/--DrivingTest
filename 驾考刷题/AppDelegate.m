@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CYTabbarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -15,8 +15,17 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //1.创建窗口
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
+    //2.设置根控制器
+    CYTabbarViewController *tabarVc = [[CYTabbarViewController alloc] init];
+    self.window.rootViewController = tabarVc;
+
+    //3.显示窗口
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

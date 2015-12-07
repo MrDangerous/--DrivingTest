@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CYTabbarViewController.h
 //  驾考刷题
 //
 //  Created by 程俊亚 on 15/12/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CYTabbarViewController : UITabBarController
 
 @end
-
