@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787001C16825000E40F34 /* CYSettingViewController.m */; };
+		18D787041C16828400E40F34 /* CYSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787031C16828400E40F34 /* CYSettingItem.m */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -26,6 +28,12 @@
 		18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C21C14798600B4631D /* UIBarButtonItem+Extension.m */; };
 		18DA89C61C14798600B4631D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C41C14798600B4631D /* UIView+Extension.m */; };
 		18DA89C91C14844200B4631D /* CYTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C81C14844200B4631D /* CYTabbar.m */; };
+		18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7529F1C1587A600D140DF /* MMDrawerBarButtonItem.m */; };
+		18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A21C1587A600D140DF /* MMDrawerController.m */; };
+		18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A41C1587A600D140DF /* MMDrawerVisualState.m */; };
+		18F752AA1C1587A600D140DF /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A61C1587A600D140DF /* UIViewController+MMDrawerController.m */; };
+		18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752AC1C15A8A100D140DF /* CYLeftDrawerTableViewController.m */; };
+		18F752AF1C15B67B00D140DF /* CYTabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F752AE1C15B67B00D140DF /* CYTabbarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18D786FF1C16825000E40F34 /* CYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingViewController.h; sourceTree = "<group>"; };
+		18D787001C16825000E40F34 /* CYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingViewController.m; sourceTree = "<group>"; };
+		18D787021C16828400E40F34 /* CYSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingItem.h; sourceTree = "<group>"; };
+		18D787031C16828400E40F34 /* CYSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingItem.m; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +94,18 @@
 		18DA89C41C14798600B4631D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		18DA89C71C14844200B4631D /* CYTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabbar.h; sourceTree = "<group>"; };
 		18DA89C81C14844200B4631D /* CYTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabbar.m; sourceTree = "<group>"; };
+		18F7529E1C1587A600D140DF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		18F7529F1C1587A600D140DF /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		18F752A01C1587A600D140DF /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		18F752A11C1587A600D140DF /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		18F752A21C1587A600D140DF /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		18F752A31C1587A600D140DF /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		18F752A41C1587A600D140DF /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		18F752A51C1587A600D140DF /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		18F752A61C1587A600D140DF /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		18F752AB1C15A8A100D140DF /* CYLeftDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYLeftDrawerTableViewController.h; path = "../../Main(主要)/Controller/CYLeftDrawerTableViewController.h"; sourceTree = "<group>"; };
+		18F752AC1C15A8A100D140DF /* CYLeftDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYLeftDrawerTableViewController.m; path = "../../Main(主要)/Controller/CYLeftDrawerTableViewController.m"; sourceTree = "<group>"; };
+		18F752AE1C15B67B00D140DF /* CYTabbarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CYTabbarViewController.xib; path = "../../Main(主要)/Controller/CYTabbarViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +133,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D786F41C167CCB00E40F34 /* LeftDrawer(左抽屉) */ = {
+			isa = PBXGroup;
+			children = (
+				18D786F51C167CCB00E40F34 /* Controller */,
+				18D786F61C167CCB00E40F34 /* Model */,
+				18D786F71C167CCB00E40F34 /* Tool */,
+				18D786F81C167CCB00E40F34 /* View */,
+			);
+			path = "LeftDrawer(左抽屉)";
+			sourceTree = "<group>";
+		};
+		18D786F51C167CCB00E40F34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18F752AB1C15A8A100D140DF /* CYLeftDrawerTableViewController.h */,
+				18F752AC1C15A8A100D140DF /* CYLeftDrawerTableViewController.m */,
+				18F752AE1C15B67B00D140DF /* CYTabbarViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D786F61C167CCB00E40F34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D786F71C167CCB00E40F34 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		18D786F81C167CCB00E40F34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18D786FA1C1681E300E40F34 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				18D786FB1C1681E300E40F34 /* Controller */,
+				18D786FC1C1681E300E40F34 /* Model */,
+				18D786FD1C1681E300E40F34 /* Tool */,
+				18D786FE1C1681E300E40F34 /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		18D786FB1C1681E300E40F34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D786FF1C16825000E40F34 /* CYSettingViewController.h */,
+				18D787001C16825000E40F34 /* CYSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18D786FC1C1681E300E40F34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18D787021C16828400E40F34 /* CYSettingItem.h */,
+				18D787031C16828400E40F34 /* CYSettingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18D786FD1C1681E300E40F34 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		18D786FE1C1681E300E40F34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18DA893C1C13D44400B4631D = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +280,8 @@
 		18DA897C1C14283E00B4631D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18D786FA1C1681E300E40F34 /* Setting(设置) */,
+				18D786F41C167CCB00E40F34 /* LeftDrawer(左抽屉) */,
 				18DA897D1C14283E00B4631D /* FirstSubject(科目一) */,
 				18DA898F1C14283F00B4631D /* SecondSubject(科目二) */,
 				18DA89941C14283F00B4631D /* ThirdSubject(科目三) */,
@@ -303,6 +414,7 @@
 		18DA898A1C14283F00B4631D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				18F7529D1C1587A600D140DF /* MMDrawerController */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -423,6 +535,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18F7529D1C1587A600D140DF /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				18F7529E1C1587A600D140DF /* MMDrawerBarButtonItem.h */,
+				18F7529F1C1587A600D140DF /* MMDrawerBarButtonItem.m */,
+				18F752A01C1587A600D140DF /* MMDrawerController+Subclass.h */,
+				18F752A11C1587A600D140DF /* MMDrawerController.h */,
+				18F752A21C1587A600D140DF /* MMDrawerController.m */,
+				18F752A31C1587A600D140DF /* MMDrawerVisualState.h */,
+				18F752A41C1587A600D140DF /* MMDrawerVisualState.m */,
+				18F752A51C1587A600D140DF /* UIViewController+MMDrawerController.h */,
+				18F752A61C1587A600D140DF /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -529,6 +657,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F752AF1C15B67B00D140DF /* CYTabbarViewController.xib in Resources */,
 				18DA89B31C14753400B4631D /* CYThirdSubjectTableViewController.xib in Resources */,
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
 				18DA89B81C14756C00B4631D /* CYSecondSubjectTableViewController.xib in Resources */,
@@ -560,14 +689,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DA89B71C14756C00B4631D /* CYSecondSubjectTableViewController.m in Sources */,
+				18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */,
 				18DA899F1C146CB700B4631D /* CYFirstSubjectViewController.m in Sources */,
+				18F752AA1C1587A600D140DF /* UIViewController+MMDrawerController.m in Sources */,
+				18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */,
 				18DA89C61C14798600B4631D /* UIView+Extension.m in Sources */,
 				18DA89AE1C14722F00B4631D /* CYNavigationViewController.m in Sources */,
+				18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */,
+				18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */,
 				18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */,
 				18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */,
+				18D787041C16828400E40F34 /* CYSettingItem.m in Sources */,
 				18DA89B21C14753400B4631D /* CYThirdSubjectTableViewController.m in Sources */,
 				18DA894A1C13D44400B4631D /* main.m in Sources */,
 				18DA899B1C146B5100B4631D /* CYTabbarViewController.m in Sources */,
+				18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
 			);

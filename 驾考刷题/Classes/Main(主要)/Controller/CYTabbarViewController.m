@@ -13,6 +13,8 @@
 #import "CYForthSubjectViewController.h"
 #import "CYNavigationViewController.h"
 #import "CYTabBar.h"
+#import "MMDrawerController.h"
+
 @interface CYTabbarViewController ()
 
 @end
@@ -39,11 +41,7 @@
       forthSubject.view.backgroundColor = CYRandomColor;
     [self addChildVc:forthSubject title:@"科目四" image:@"home_icon_4" selectedImage:@"home_icon_4"];
 
-    //更换系统自带的tabbar
 }
-
-
-
 
 
 -(void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage

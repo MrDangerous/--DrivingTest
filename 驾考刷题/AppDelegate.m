@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "CYTabbarViewController.h"
+#import "CYNavigationViewController.h"
+#import "CYLeftDrawerTableViewController.h"
+#import "MMDrawerController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,8 +24,23 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 
     //2.设置根控制器
+
+    //初始化左视图
+    CYLeftDrawerTableViewController *leftTVC = [[CYLeftDrawerTableViewController alloc]init];
+    CYNavigationViewController *leftNC = [[CYNavigationViewController alloc]initWithRootViewController:leftTVC];
+    //    leftNC.view.backgroundColor = [UIColor redColor];
     CYTabbarViewController *tabarVc = [[CYTabbarViewController alloc] init];
-    self.window.rootViewController = tabarVc;
+    //初始化抽屉视图控制器
+    MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:tabarVc leftDrawerViewController:leftNC];
+
+    //设置抽屉抽出的宽度
+    drawerController.maximumLeftDrawerWidth = 300;
+    //滑动手势开关抽屉
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+
+
+    self.window.rootViewController = drawerController;
 
     //3.显示窗口
     [self.window makeKeyAndVisible];

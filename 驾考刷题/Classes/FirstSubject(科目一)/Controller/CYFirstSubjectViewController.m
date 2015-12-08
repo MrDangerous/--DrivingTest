@@ -7,6 +7,9 @@
 //
 
 #import "CYFirstSubjectViewController.h"
+#import "UIViewController+MMDrawerController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "CYLeftDrawerTableViewController.h"
 
 @interface CYFirstSubjectViewController ()
 
@@ -16,22 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setupLeftMenuButton];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)setupLeftMenuButton
+{
+    //创建按钮
+    MMDrawerBarButtonItem *leftDrawerButton = [[MMDrawerBarButtonItem alloc]initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    //为navigationItem添加LeftBarButtonItem
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
 }
+-(void)leftDrawerButtonPress:(id)sender
+{
+    //开关左抽屉
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 @end
