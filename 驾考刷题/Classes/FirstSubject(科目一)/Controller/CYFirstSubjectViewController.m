@@ -10,7 +10,7 @@
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "CYLeftDrawerTableViewController.h"
-
+#import "CYSettingViewController.h"
 @interface CYFirstSubjectViewController ()
 
 @end
@@ -27,6 +27,8 @@
     MMDrawerBarButtonItem *leftDrawerButton = [[MMDrawerBarButtonItem alloc]initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     //为navigationItem添加LeftBarButtonItem
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
+
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(setting) image:@"Home_setting" highImage:nil];
 }
 -(void)leftDrawerButtonPress:(id)sender
 {
@@ -34,5 +36,13 @@
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 
 }
+/** 设置 */
+- (void)setting {
+    //进入设置的控制器
+    CYSettingViewController *settingVc = [[CYSettingViewController alloc]init];
+
+    [self.navigationController pushViewController:settingVc animated:YES];
+}
+
 
 @end

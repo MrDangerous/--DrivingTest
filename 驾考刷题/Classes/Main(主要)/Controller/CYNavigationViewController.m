@@ -32,12 +32,25 @@
     disableTextAttrs[NSFontAttributeName] = textAttrs[NSFontAttributeName];
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
 
+    //UIApplication设置状态栏的样式
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
+    //设置导航条标题的字体及颜色
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    navBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
+
+    //设置导航条背景颜色
+    CGFloat r = 55/255.0;
+    CGFloat g = 189/255.0;
+    CGFloat b = 243/255.0;
+    UIColor *color = [UIColor colorWithRed:r green:g blue:b alpha:1];
+    [navBar setBarTintColor:color];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 /**
  *  拦截所有push进来的控制器
@@ -45,7 +58,7 @@
  *  @param viewController 即将push进来的控制器
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-
+//    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(setting) image:@"Home_setting" highImage:nil];
     if (self.viewControllers.count > 0) { // 这时push进来的控制器viewController，不是第一个子控制器（不是根控制器）
         /* 自动显示和隐藏tabbar */
         viewController.hidesBottomBarWhenPushed = YES;
@@ -56,10 +69,17 @@
     [super pushViewController:viewController animated:YES];
 }
 
-
+///** 设置 */
+//- (void)setting {
+//
+//}
 - (void)back {
     [self popViewControllerAnimated:YES];
 }
-
-
+///**
+// *  设置状态栏样式
+// */
+//-(UIStatusBarStyle)preferredStatusBarStyle{
+//    return UIStatusBarStyleLightContent;
+//}
 @end

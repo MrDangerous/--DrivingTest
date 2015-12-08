@@ -8,76 +8,48 @@
 
 #import "CYSettingViewController.h"
 #import "CYSettingItem.h"
-
-@interface CYSettingViewController ()
-/**
- *  表格数据，里面存储数组
- */
-@property(nonatomic, strong)NSMutableArray *cellData;
-@end
+#import "CYSettingArrowItem.h"
+#import "CYSettingSwitchItem.h"
+#import "CYSettingCell.h"
+#import "TestViewController.h"
+#import "MBProgressHUD+MJ.h"
+#import "CYSettingGroup.h"
+#import "AboutMeViewController.h"
 
 @implementation CYSettingViewController
--(NSMutableArray *)cellData
-{
-    if (!_cellData) {
-        self.cellData = [[NSMutableArray alloc]init];
-    }
-    return _cellData;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.title = @"设置";
     //初始化数据
     //第一组数据
-    CYSettingItem *item1 = [CYSettingItem itemWithIcon:@"handSake" title:@"提醒和推送"];
-    CYSettingItem *item2 = [CYSettingItem itemWithIcon:@"handSake" title:@"我"];
-    CYSettingItem *item3 = [CYSettingItem itemWithIcon:@"handSake" title:@"提醒"];
-    NSArray *group1 = @[item1,item2,item3];
+    CYSettingItem *item1 = [CYSettingSwitchItem itemWithIcon:@"handShake" title:@"是否自动跳转下一题"];
+    CYSettingItem *item2 = [CYSettingSwitchItem itemWithIcon:@"handShake" title:@"是否默认展开解释"];
+    CYSettingItem *item3 = [CYSettingSwitchItem itemWithIcon:@"handShake" title:@"是否开启声音"];
+    CYSettingItem *item4 = [CYSettingSwitchItem itemWithIcon:@"handShake" title:@"是否切换夜间模式"];
+    CYSettingGroup *group1 = [[CYSettingGroup alloc] init];
+    group1.items = @[item1,item2,item3,item4];
     [self.cellData addObject:group1];
     //显示数据
 
-    CYSettingItem *item4 = [CYSettingItem itemWithIcon:@"handSake" title:@"提送"];
-    CYSettingItem *item5 = [CYSettingItem itemWithIcon:@"handSake" title:@"提推送"];
-    CYSettingItem *item6 = [CYSettingItem itemWithIcon:@"handSake" title:@"推送"];
-    CYSettingItem *item7 = [CYSettingItem itemWithIcon:@"handSake" title:@"送"];
-    CYSettingItem *item8 = [CYSettingItem itemWithIcon:@"handSake" title:@"推送"];
-    CYSettingItem *item9 = [CYSettingItem itemWithIcon:@"handSake" title:@"提醒"];
-    NSArray *group2 = @[item4,item5,item6,item7,item8,item9];
+    CYSettingItem *item5 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"关于我" vcClass:[AboutMeViewController class]];
+    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"];
+    CYSettingItem *item7 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"检查版本更新"];
+    //版本更新是一个特殊的操作，把这个操作存放在block属性中
+    item7.operation = ^(){
+        NSLog(@"正在检查版本更新");
+        //给一个假象
+        [MBProgressHUD showMessage:@"正在检查版本更新中..."];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showSuccess:@"当前已经是最新版本"];
+        });
+    };
+
+    CYSettingGroup *group2 = [[CYSettingGroup alloc] init];
+    group2.items = @[item5,item6,item7];
     [self.cellData addObject:group2];
 }
-
-
-#pragma mark - 组的个数
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.cellData.count;
-}
-#pragma mark - 组的行数
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //组数据
-    NSArray *group = self.cellData[section];
-    return group.count;
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"SettingCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    //获取模型显示数据
-    NSArray *group = self.cellData[indexPath.section];
-    CYSettingItem *item = group[indexPath.row];
-
-    //显示图片和标题
-    cell.textLabel.text = item.title;
-    cell.imageView.image = [UIImage imageNamed:item.icon];
-
-
-    return cell;
-}
-
 
 
 @end

@@ -22,4 +22,11 @@
     return [[self alloc]initWithIcon:icon title:title];
 
 }
++(instancetype)itemWithIcon:(NSString *)icon title:(NSString *)title vcClass:(Class)vcClass
+{
+    CYSettingItem *item = [self itemWithIcon:icon title:title];
+    item.vcClass = vcClass;
+
+    return item;
+}
 @end

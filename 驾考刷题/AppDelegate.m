@@ -20,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     //1.创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 
@@ -39,8 +40,8 @@
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
 
-
     self.window.rootViewController = drawerController;
+    
 
     //3.显示窗口
     [self.window makeKeyAndVisible];
@@ -67,6 +68,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 @end
