@@ -38,7 +38,6 @@
     //设置导航条标题的字体及颜色
     UINavigationBar *navBar = [UINavigationBar appearance];
     navBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
-
     //设置导航条背景颜色
     CGFloat r = 55/255.0;
     CGFloat g = 189/255.0;
@@ -64,6 +63,7 @@
         viewController.hidesBottomBarWhenPushed = YES;
         // 统一更改导航栏返回按钮样式
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"navi_back" highImage:@"navi_back"];
+
     }
 
     [super pushViewController:viewController animated:YES];

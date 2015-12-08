@@ -12,13 +12,13 @@
 		18D787071C16A28400E40F34 /* CYSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787061C16A28400E40F34 /* CYSettingArrowItem.m */; };
 		18D7870A1C16A2AC00E40F34 /* CYSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787091C16A2AC00E40F34 /* CYSettingSwitchItem.m */; };
 		18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7870C1C16ADE900E40F34 /* CYSettingCell.m */; };
-		18D787111C16B36200E40F34 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787101C16B36200E40F34 /* TestViewController.m */; };
 		18D787181C16BF4300E40F34 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787141C16BF4300E40F34 /* MBProgressHUD+MJ.m */; };
 		18D787191C16BF4300E40F34 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18D787151C16BF4300E40F34 /* MBProgressHUD.bundle */; };
 		18D7871A1C16BF4300E40F34 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787171C16BF4300E40F34 /* MBProgressHUD.m */; };
 		18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */; };
 		18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871F1C16C26100E40F34 /* CYSettingGroup.m */; };
 		18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787221C16CA7200E40F34 /* BaseSettingViewController.m */; };
+		18D787291C16D17100E40F34 /* EncourageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787281C16D17100E40F34 /* EncourageViewController.m */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -74,8 +74,6 @@
 		18D787091C16A2AC00E40F34 /* CYSettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingSwitchItem.m; sourceTree = "<group>"; };
 		18D7870B1C16ADE900E40F34 /* CYSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingCell.h; sourceTree = "<group>"; };
 		18D7870C1C16ADE900E40F34 /* CYSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingCell.m; sourceTree = "<group>"; };
-		18D7870F1C16B36200E40F34 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		18D787101C16B36200E40F34 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		18D787131C16BF4300E40F34 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		18D787141C16BF4300E40F34 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		18D787151C16BF4300E40F34 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		18D7871F1C16C26100E40F34 /* CYSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingGroup.m; sourceTree = "<group>"; };
 		18D787211C16CA7200E40F34 /* BaseSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSettingViewController.h; path = ../PushAndWarning/BaseSettingViewController.h; sourceTree = "<group>"; };
 		18D787221C16CA7200E40F34 /* BaseSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseSettingViewController.m; path = ../PushAndWarning/BaseSettingViewController.m; sourceTree = "<group>"; };
+		18D787271C16D17100E40F34 /* EncourageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncourageViewController.h; sourceTree = "<group>"; };
+		18D787281C16D17100E40F34 /* EncourageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncourageViewController.m; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -261,10 +261,10 @@
 		18D7870E1C16B33A00E40F34 /* PushAndWarning */ = {
 			isa = PBXGroup;
 			children = (
-				18D7870F1C16B36200E40F34 /* TestViewController.h */,
-				18D787101C16B36200E40F34 /* TestViewController.m */,
 				18D7871B1C16C09E00E40F34 /* AboutMeViewController.h */,
 				18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */,
+				18D787271C16D17100E40F34 /* EncourageViewController.h */,
+				18D787281C16D17100E40F34 /* EncourageViewController.m */,
 			);
 			path = PushAndWarning;
 			sourceTree = "<group>";
@@ -764,6 +764,7 @@
 				18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */,
 				18DA89AE1C14722F00B4631D /* CYNavigationViewController.m in Sources */,
 				18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */,
+				18D787291C16D17100E40F34 /* EncourageViewController.m in Sources */,
 				18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */,
 				18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */,
 				18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */,
@@ -776,7 +777,6 @@
 				18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */,
 				18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */,
 				18D787181C16BF4300E40F34 /* MBProgressHUD+MJ.m in Sources */,
-				18D787111C16B36200E40F34 /* TestViewController.m in Sources */,
 				18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,

@@ -1,23 +1,23 @@
 //
-//  TestViewController.m
+//  EncourageViewController.m
 //  驾考刷题
 //
 //  Created by 程俊亚 on 15/12/8.
 //  Copyright © 2015年 john. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "EncourageViewController.h"
 
-@interface TestViewController ()
+@interface EncourageViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation EncourageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor brownColor];
+    self.view.backgroundColor = CYRandomColor;
 }
 
 - (void)didReceiveMemoryWarning {

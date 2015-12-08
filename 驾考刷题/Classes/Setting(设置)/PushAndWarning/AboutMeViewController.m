@@ -11,8 +11,6 @@
 #import "CYSettingArrowItem.h"
 #import "CYSettingSwitchItem.h"
 #import "CYSettingCell.h"
-#import "TestViewController.h"
-#import "MBProgressHUD+MJ.h"
 #import "CYSettingGroup.h"
 
 

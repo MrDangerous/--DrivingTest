@@ -7,13 +7,8 @@
 //
 
 #import "BaseSettingViewController.h"
-#import "CYSettingItem.h"
-#import "CYSettingArrowItem.h"
-#import "CYSettingSwitchItem.h"
 #import "CYSettingCell.h"
-#import "TestViewController.h"
 #import "MBProgressHUD+MJ.h"
-#import "CYSettingGroup.h"
 #import "AboutMeViewController.h"
 @interface BaseSettingViewController ()
 
@@ -38,7 +33,14 @@
     }
     return _cellData;
 }
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
 
+    //设置背景
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+
+}
 
 
 #pragma mark - 组的个数

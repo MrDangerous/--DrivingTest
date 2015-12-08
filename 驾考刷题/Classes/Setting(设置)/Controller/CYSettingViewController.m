@@ -7,15 +7,10 @@
 //
 
 #import "CYSettingViewController.h"
-#import "CYSettingItem.h"
-#import "CYSettingArrowItem.h"
-#import "CYSettingSwitchItem.h"
 #import "CYSettingCell.h"
-#import "TestViewController.h"
 #import "MBProgressHUD+MJ.h"
-#import "CYSettingGroup.h"
 #import "AboutMeViewController.h"
-
+#import "EncourageViewController.h"
 @implementation CYSettingViewController
 
 - (void)viewDidLoad {
@@ -33,7 +28,7 @@
     //显示数据
 
     CYSettingItem *item5 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"关于我" vcClass:[AboutMeViewController class]];
-    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"];
+    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"vcClass:[EncourageViewController class]];
     CYSettingItem *item7 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"检查版本更新"];
     //版本更新是一个特殊的操作，把这个操作存放在block属性中
     item7.operation = ^(){
