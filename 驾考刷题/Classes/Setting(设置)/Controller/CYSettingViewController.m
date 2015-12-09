@@ -45,8 +45,15 @@
     CYSettingItem *item8 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"产品推荐" vcClass:[CYProductShareViewController class]];
     CYSettingItem *item9 = [CYSettingLabelItem itemWithIcon:@"MoreHelp" title:@"答错题后自动移除"];
     item9.operation = ^(){
-        CYPopSelectView *view = [[CYPopSelectView alloc]init];
-        view.bounds = CGRectMake(100, 100, 100, 100);
+        CYPopSelectView *popView = [[CYPopSelectView alloc]init];
+        //设置popView的尺寸
+        CGFloat viewW = self.view.frame.size.width;
+        CGFloat viewH = self.view.frame.size.height;
+        CGFloat popViewW = 200;
+        CGFloat popViewH = 300;
+        CGFloat popViewX = (viewW - popViewW) * 0.5;
+        CGFloat popViewY = (viewH - popViewH) * 0.5;
+        popView.frame = CGRectMake(popViewX, popViewY, popViewW, popViewH);
     };
 
     
