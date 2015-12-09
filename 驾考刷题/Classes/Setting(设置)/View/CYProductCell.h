@@ -1,5 +1,5 @@
 //
-//  EncourageViewController.h
+//  CYProductCell.h
 //  驾考刷题
 //
 //  Created by 程俊亚 on 15/12/8.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CYProduct.h"
+@interface CYProductCell : UICollectionViewCell
 
-@interface EncourageViewController : UITableViewController
+@property(nonatomic, strong)CYProduct *product;
 
 @end

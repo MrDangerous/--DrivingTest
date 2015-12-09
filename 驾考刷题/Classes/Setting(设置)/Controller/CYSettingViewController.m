@@ -10,7 +10,9 @@
 #import "CYSettingCell.h"
 #import "MBProgressHUD+MJ.h"
 #import "AboutMeViewController.h"
-#import "EncourageViewController.h"
+#import "CYEncourageController.h"
+#import "CYProductShareViewController.h"
+
 @implementation CYSettingViewController
 
 - (void)viewDidLoad {
@@ -28,11 +30,10 @@
     //显示数据
 
     CYSettingItem *item5 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"关于我" vcClass:[AboutMeViewController class]];
-    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"vcClass:[EncourageViewController class]];
+    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"vcClass:[CYEncourageController class]];
     CYSettingItem *item7 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"检查版本更新"];
     //版本更新是一个特殊的操作，把这个操作存放在block属性中
     item7.operation = ^(){
-        NSLog(@"正在检查版本更新");
         //给一个假象
         [MBProgressHUD showMessage:@"正在检查版本更新中..."];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -40,9 +41,15 @@
             [MBProgressHUD showSuccess:@"当前已经是最新版本"];
         });
     };
+    CYSettingItem *item8 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"产品推荐" vcClass:[CYProductShareViewController class]];
+    CYSettingItem *item9 = [CYSettingItem itemWithIcon:@"MoreHelp" title:@"答错题后自动移除"];
+    item9.operation = ^(){
 
+    };
+
+    
     CYSettingGroup *group2 = [[CYSettingGroup alloc] init];
-    group2.items = @[item5,item6,item7];
+    group2.items = @[item5,item6,item7,item8,item9];
     [self.cellData addObject:group2];
 }
 

@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"设置";
+    self.title = @"关于我";
     //初始化数据
     //第一组数据
     CYSettingItem *item1 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"我"];
@@ -29,8 +29,6 @@
     CYSettingGroup *group1 = [[CYSettingGroup alloc] init];
     group1.items = @[item1,item2,item3,item4,item5];
     [self.cellData addObject:group1];
-    //显示数据
-
 }
 
 

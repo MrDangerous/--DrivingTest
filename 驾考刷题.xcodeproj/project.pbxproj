@@ -18,7 +18,6 @@
 		18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */; };
 		18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871F1C16C26100E40F34 /* CYSettingGroup.m */; };
 		18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787221C16CA7200E40F34 /* BaseSettingViewController.m */; };
-		18D787291C16D17100E40F34 /* EncourageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787281C16D17100E40F34 /* EncourageViewController.m */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -44,6 +43,28 @@
 		18F752AA1C1587A600D140DF /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A61C1587A600D140DF /* UIViewController+MMDrawerController.m */; };
 		18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752AC1C15A8A100D140DF /* CYLeftDrawerTableViewController.m */; };
 		18F752AF1C15B67B00D140DF /* CYTabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F752AE1C15B67B00D140DF /* CYTabbarViewController.xib */; };
+		18FD4F281C170A0500D01D96 /* CYProductShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */; };
+		18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4F511C170F4900D01D96 /* CYProduct.m */; };
+		18FD4FC11C17116C00D01D96 /* apper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB01C17116C00D01D96 /* apper@2x.png */; };
+		18FD4FC21C17116C00D01D96 /* caipiao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB11C17116C00D01D96 /* caipiao@2x.png */; };
+		18FD4FC31C17116C00D01D96 /* cloudphotos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB21C17116C00D01D96 /* cloudphotos@2x.png */; };
+		18FD4FC41C17116C00D01D96 /* fanfan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB31C17116C00D01D96 /* fanfan@2x.png */; };
+		18FD4FC51C17116C00D01D96 /* huihui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB41C17116C00D01D96 /* huihui@2x.png */; };
+		18FD4FC61C17116C00D01D96 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB51C17116C00D01D96 /* icon_back@2x.png */; };
+		18FD4FC71C17116C00D01D96 /* magicbook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB61C17116C00D01D96 /* magicbook@2x.png */; };
+		18FD4FC81C17116C00D01D96 /* movie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB71C17116C00D01D96 /* movie@2x.png */; };
+		18FD4FC91C17116C00D01D96 /* newb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB81C17116C00D01D96 /* newb@2x.png */; };
+		18FD4FCA1C17116C00D01D96 /* newsapp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FB91C17116C00D01D96 /* newsapp@2x.png */; };
+		18FD4FCB1C17116C00D01D96 /* open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBA1C17116C00D01D96 /* open@2x.png */; };
+		18FD4FCC1C17116C00D01D96 /* reader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBB1C17116C00D01D96 /* reader@2x.png */; };
+		18FD4FCD1C17116C00D01D96 /* shoujiyou@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBC1C17116C00D01D96 /* shoujiyou@2x.png */; };
+		18FD4FCE1C17116C00D01D96 /* tvguide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBD1C17116C00D01D96 /* tvguide@2x.png */; };
+		18FD4FCF1C17116C00D01D96 /* youdao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBE1C17116C00D01D96 /* youdao@2x.png */; };
+		18FD4FD01C17116C00D01D96 /* youdaonote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FBF1C17116C00D01D96 /* youdaonote@2x.png */; };
+		18FD4FD11C17116C00D01D96 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FC01C17116C00D01D96 /* products.json */; };
+		18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FD61C17151400D01D96 /* CYProductCell.m */; };
+		18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FD71C17151400D01D96 /* CYProductCell.xib */; };
+		18FD4FDD1C17234200D01D96 /* CYEncourageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FDB1C17234200D01D96 /* CYEncourageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +106,6 @@
 		18D7871F1C16C26100E40F34 /* CYSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingGroup.m; sourceTree = "<group>"; };
 		18D787211C16CA7200E40F34 /* BaseSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSettingViewController.h; path = ../PushAndWarning/BaseSettingViewController.h; sourceTree = "<group>"; };
 		18D787221C16CA7200E40F34 /* BaseSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseSettingViewController.m; path = ../PushAndWarning/BaseSettingViewController.m; sourceTree = "<group>"; };
-		18D787271C16D17100E40F34 /* EncourageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncourageViewController.h; sourceTree = "<group>"; };
-		18D787281C16D17100E40F34 /* EncourageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncourageViewController.m; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +154,32 @@
 		18F752AB1C15A8A100D140DF /* CYLeftDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYLeftDrawerTableViewController.h; path = "../../Main(主要)/Controller/CYLeftDrawerTableViewController.h"; sourceTree = "<group>"; };
 		18F752AC1C15A8A100D140DF /* CYLeftDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYLeftDrawerTableViewController.m; path = "../../Main(主要)/Controller/CYLeftDrawerTableViewController.m"; sourceTree = "<group>"; };
 		18F752AE1C15B67B00D140DF /* CYTabbarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CYTabbarViewController.xib; path = "../../Main(主要)/Controller/CYTabbarViewController.xib"; sourceTree = "<group>"; };
+		18FD4F261C170A0500D01D96 /* CYProductShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProductShareViewController.h; sourceTree = "<group>"; };
+		18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProductShareViewController.m; sourceTree = "<group>"; };
+		18FD4F501C170F4900D01D96 /* CYProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProduct.h; sourceTree = "<group>"; };
+		18FD4F511C170F4900D01D96 /* CYProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProduct.m; sourceTree = "<group>"; };
+		18FD4FB01C17116C00D01D96 /* apper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apper@2x.png"; sourceTree = "<group>"; };
+		18FD4FB11C17116C00D01D96 /* caipiao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "caipiao@2x.png"; sourceTree = "<group>"; };
+		18FD4FB21C17116C00D01D96 /* cloudphotos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloudphotos@2x.png"; sourceTree = "<group>"; };
+		18FD4FB31C17116C00D01D96 /* fanfan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanfan@2x.png"; sourceTree = "<group>"; };
+		18FD4FB41C17116C00D01D96 /* huihui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huihui@2x.png"; sourceTree = "<group>"; };
+		18FD4FB51C17116C00D01D96 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
+		18FD4FB61C17116C00D01D96 /* magicbook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magicbook@2x.png"; sourceTree = "<group>"; };
+		18FD4FB71C17116C00D01D96 /* movie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "movie@2x.png"; sourceTree = "<group>"; };
+		18FD4FB81C17116C00D01D96 /* newb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newb@2x.png"; sourceTree = "<group>"; };
+		18FD4FB91C17116C00D01D96 /* newsapp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newsapp@2x.png"; sourceTree = "<group>"; };
+		18FD4FBA1C17116C00D01D96 /* open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open@2x.png"; sourceTree = "<group>"; };
+		18FD4FBB1C17116C00D01D96 /* reader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reader@2x.png"; sourceTree = "<group>"; };
+		18FD4FBC1C17116C00D01D96 /* shoujiyou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoujiyou@2x.png"; sourceTree = "<group>"; };
+		18FD4FBD1C17116C00D01D96 /* tvguide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tvguide@2x.png"; sourceTree = "<group>"; };
+		18FD4FBE1C17116C00D01D96 /* youdao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "youdao@2x.png"; sourceTree = "<group>"; };
+		18FD4FBF1C17116C00D01D96 /* youdaonote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "youdaonote@2x.png"; sourceTree = "<group>"; };
+		18FD4FC01C17116C00D01D96 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		18FD4FD51C17151400D01D96 /* CYProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProductCell.h; sourceTree = "<group>"; };
+		18FD4FD61C17151400D01D96 /* CYProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProductCell.m; sourceTree = "<group>"; };
+		18FD4FD71C17151400D01D96 /* CYProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYProductCell.xib; sourceTree = "<group>"; };
+		18FD4FDA1C17234200D01D96 /* CYEncourageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEncourageController.h; sourceTree = "<group>"; };
+		18FD4FDB1C17234200D01D96 /* CYEncourageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEncourageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +283,8 @@
 				18D787091C16A2AC00E40F34 /* CYSettingSwitchItem.m */,
 				18D7871E1C16C26100E40F34 /* CYSettingGroup.h */,
 				18D7871F1C16C26100E40F34 /* CYSettingGroup.m */,
+				18FD4F501C170F4900D01D96 /* CYProduct.h */,
+				18FD4F511C170F4900D01D96 /* CYProduct.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +301,9 @@
 			children = (
 				18D7870B1C16ADE900E40F34 /* CYSettingCell.h */,
 				18D7870C1C16ADE900E40F34 /* CYSettingCell.m */,
+				18FD4FD51C17151400D01D96 /* CYProductCell.h */,
+				18FD4FD61C17151400D01D96 /* CYProductCell.m */,
+				18FD4FD71C17151400D01D96 /* CYProductCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,8 +313,10 @@
 			children = (
 				18D7871B1C16C09E00E40F34 /* AboutMeViewController.h */,
 				18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */,
-				18D787271C16D17100E40F34 /* EncourageViewController.h */,
-				18D787281C16D17100E40F34 /* EncourageViewController.m */,
+				18FD4F261C170A0500D01D96 /* CYProductShareViewController.h */,
+				18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */,
+				18FD4FDA1C17234200D01D96 /* CYEncourageController.h */,
+				18FD4FDB1C17234200D01D96 /* CYEncourageController.m */,
 			);
 			path = PushAndWarning;
 			sourceTree = "<group>";
@@ -314,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				18DA89541C13D44400B4631D /* Assets.xcassets */,
+				18FD4FAE1C17116C00D01D96 /* products */,
 				18DA89561C13D44400B4631D /* LaunchScreen.storyboard */,
 				18DA89591C13D44400B4631D /* Info.plist */,
 				18DA89491C13D44400B4631D /* main.m */,
@@ -615,6 +668,38 @@
 			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
+		18FD4FAE1C17116C00D01D96 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				18FD4FAF1C17116C00D01D96 /* Product */,
+				18FD4FC01C17116C00D01D96 /* products.json */,
+			);
+			path = products;
+			sourceTree = "<group>";
+		};
+		18FD4FAF1C17116C00D01D96 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				18FD4FB01C17116C00D01D96 /* apper@2x.png */,
+				18FD4FB11C17116C00D01D96 /* caipiao@2x.png */,
+				18FD4FB21C17116C00D01D96 /* cloudphotos@2x.png */,
+				18FD4FB31C17116C00D01D96 /* fanfan@2x.png */,
+				18FD4FB41C17116C00D01D96 /* huihui@2x.png */,
+				18FD4FB51C17116C00D01D96 /* icon_back@2x.png */,
+				18FD4FB61C17116C00D01D96 /* magicbook@2x.png */,
+				18FD4FB71C17116C00D01D96 /* movie@2x.png */,
+				18FD4FB81C17116C00D01D96 /* newb@2x.png */,
+				18FD4FB91C17116C00D01D96 /* newsapp@2x.png */,
+				18FD4FBA1C17116C00D01D96 /* open@2x.png */,
+				18FD4FBB1C17116C00D01D96 /* reader@2x.png */,
+				18FD4FBC1C17116C00D01D96 /* shoujiyou@2x.png */,
+				18FD4FBD1C17116C00D01D96 /* tvguide@2x.png */,
+				18FD4FBE1C17116C00D01D96 /* youdao@2x.png */,
+				18FD4FBF1C17116C00D01D96 /* youdaonote@2x.png */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -677,6 +762,7 @@
 		18DA893D1C13D44400B4631D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CY;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = john;
 				TargetAttributes = {
@@ -721,14 +807,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FD4FC61C17116C00D01D96 /* icon_back@2x.png in Resources */,
+				18FD4FCA1C17116C00D01D96 /* newsapp@2x.png in Resources */,
 				18F752AF1C15B67B00D140DF /* CYTabbarViewController.xib in Resources */,
+				18FD4FC21C17116C00D01D96 /* caipiao@2x.png in Resources */,
+				18FD4FC91C17116C00D01D96 /* newb@2x.png in Resources */,
 				18D787191C16BF4300E40F34 /* MBProgressHUD.bundle in Resources */,
 				18DA89B31C14753400B4631D /* CYThirdSubjectTableViewController.xib in Resources */,
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
+				18FD4FC71C17116C00D01D96 /* magicbook@2x.png in Resources */,
+				18FD4FCF1C17116C00D01D96 /* youdao@2x.png in Resources */,
 				18DA89B81C14756C00B4631D /* CYSecondSubjectTableViewController.xib in Resources */,
 				18DA89551C13D44400B4631D /* Assets.xcassets in Resources */,
+				18FD4FC81C17116C00D01D96 /* movie@2x.png in Resources */,
+				18FD4FD01C17116C00D01D96 /* youdaonote@2x.png in Resources */,
+				18FD4FC11C17116C00D01D96 /* apper@2x.png in Resources */,
+				18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */,
+				18FD4FD11C17116C00D01D96 /* products.json in Resources */,
+				18FD4FCE1C17116C00D01D96 /* tvguide@2x.png in Resources */,
+				18FD4FC51C17116C00D01D96 /* huihui@2x.png in Resources */,
+				18FD4FC41C17116C00D01D96 /* fanfan@2x.png in Resources */,
 				18DA89BD1C14758D00B4631D /* CYForthSubjectViewController.xib in Resources */,
+				18FD4FC31C17116C00D01D96 /* cloudphotos@2x.png in Resources */,
+				18FD4FCD1C17116C00D01D96 /* shoujiyou@2x.png in Resources */,
+				18FD4FCC1C17116C00D01D96 /* reader@2x.png in Resources */,
 				18DA89A01C146CB700B4631D /* CYFirstSubjectViewController.xib in Resources */,
+				18FD4FCB1C17116C00D01D96 /* open@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +860,8 @@
 				18DA89B71C14756C00B4631D /* CYSecondSubjectTableViewController.m in Sources */,
 				18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */,
 				18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */,
+				18FD4FDD1C17234200D01D96 /* CYEncourageController.m in Sources */,
+				18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */,
 				18DA899F1C146CB700B4631D /* CYFirstSubjectViewController.m in Sources */,
 				18F752AA1C1587A600D140DF /* UIViewController+MMDrawerController.m in Sources */,
 				18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */,
@@ -764,11 +870,11 @@
 				18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */,
 				18DA89AE1C14722F00B4631D /* CYNavigationViewController.m in Sources */,
 				18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */,
-				18D787291C16D17100E40F34 /* EncourageViewController.m in Sources */,
 				18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */,
 				18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */,
 				18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */,
 				18D7870A1C16A2AC00E40F34 /* CYSettingSwitchItem.m in Sources */,
+				18FD4F281C170A0500D01D96 /* CYProductShareViewController.m in Sources */,
 				18D787041C16828400E40F34 /* CYSettingItem.m in Sources */,
 				18DA89B21C14753400B4631D /* CYThirdSubjectTableViewController.m in Sources */,
 				18DA894A1C13D44400B4631D /* main.m in Sources */,
@@ -778,6 +884,7 @@
 				18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */,
 				18D787181C16BF4300E40F34 /* MBProgressHUD+MJ.m in Sources */,
 				18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */,
+				18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
 			);
@@ -909,7 +1016,7 @@
 		18DA89731C13D44400B4631D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";
 				INFOPLIST_FILE = "驾考刷题/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -921,7 +1028,7 @@
 		18DA89741C13D44400B4631D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";
 				INFOPLIST_FILE = "驾考刷题/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
