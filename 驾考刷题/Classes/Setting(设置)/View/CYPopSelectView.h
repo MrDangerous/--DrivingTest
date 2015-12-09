@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CYPopSelectView;
+@protocol  CYPopSelectViewDelegate<NSObject>
+
+-(void)popSelectView:(CYPopSelectView *)popSelectView;
+-(void)popSelectView:(CYPopSelectView *)popSelectView didFinshedChangeCellData:(NSString *)cellData;
+
+@end
+
 
 @interface CYPopSelectView : UIView
+
+@property(nonatomic, weak)id<CYPopSelectViewDelegate> delegate;
 
 @end

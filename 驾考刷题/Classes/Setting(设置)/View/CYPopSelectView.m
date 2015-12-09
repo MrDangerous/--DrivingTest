@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property(nonatomic, strong)NSArray *cellData;
 @end
 
 @implementation CYPopSelectView
@@ -35,9 +36,17 @@
     }
     return self;
 }
+-(NSArray *)cellData
+{
+    if (!_cellData) {
+        self.cellData = [[NSArray alloc]init];
+        self.cellData = @[@"不移除",@"1次",@"2次",@"3次",@"4次",@"5次",@"6次"];
+    }
+    return _cellData;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return self.cellData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,25 +57,8 @@
     }
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     cell.textLabel.font = [UIFont systemFontOfSize:16];
-    switch (indexPath.row) {
-            case 0: cell.textLabel.text = @"不移除";
-                break;
-            case 1: cell.textLabel.text = @"1次";
-                break;
-            case 2: cell.textLabel.text = @"2次";
-                break;
-            case 3: cell.textLabel.text = @"3次";
-                break;
-            case 4: cell.textLabel.text = @"4次";
-                break;
-            case 5: cell.textLabel.text = @"5次";
-                break;
-            case 6: cell.textLabel.text = @"6次";
-                break;
-                
-            default:
-                break;
-        }
+    //设置数据
+    cell.textLabel.text = self.cellData[indexPath.row];
     return cell;
 }
 
@@ -76,13 +68,17 @@
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    if ([self.delegate respondsToSelector:@selector(popSelectView:didFinshedChangeCellData:)]) {
+        [self.delegate popSelectView:self didFinshedChangeCellData:self.cellData[indexPath.row]];
+    }
 
 }
 
 
 #pragma mark 按钮的单击事件
 - (IBAction)btnClick:(id)sender {
-
+    if ([self.delegate respondsToSelector:@selector(popSelectView:)]) {
+        [self.delegate popSelectView:self];
+    }
 }
 @end

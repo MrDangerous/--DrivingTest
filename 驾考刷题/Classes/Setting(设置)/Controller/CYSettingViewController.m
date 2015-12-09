@@ -15,7 +15,7 @@
 #import "CYPopSelectView.h"
 #import "CYSettingLabelItem.h"
 
-@interface CYSettingViewController()
+@interface CYSettingViewController()<CYPopSelectViewDelegate>
 /**
  *  用来引用那个阴影属性
  */
@@ -25,6 +25,9 @@
  */
 @property(nonatomic, weak)CYPopSelectView *popView;
 
+@property(nonatomic, strong)CYSettingCell *popCell;
+
+@property(nonatomic, strong)NSIndexPath *IndexPath;
 @end
 @implementation CYSettingViewController
 
@@ -74,6 +77,8 @@
         [btnCover addTarget:self action:@selector(comeBack) forControlEvents:UIControlEventTouchUpInside];
 
         CYPopSelectView *popView = [[CYPopSelectView alloc]init];
+        //设置代理
+        popView.delegate = self;
         //设置popView的尺寸
         CGFloat viewW = self.view.frame.size.width;
         CGFloat viewH = self.view.frame.size.height;
@@ -103,8 +108,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CYSettingCell *cell = [CYSettingCell cellWithTableView:tableView];
-//            cell.accessoryView
-//    cell.mLabel
+    self.popCell = cell;
+    self.IndexPath =indexPath;
     //获取组的数据模型
     CYSettingGroup *group = self.cellData[indexPath.section];
 
@@ -116,5 +121,15 @@
     return cell;
 }
 
-
+#pragma mark - 自定义PopSelectView的代理方法
+-(void)popSelectView:(CYPopSelectView *)popSelectView
+{
+    [self comeBack];
+}
+-(void)popSelectView:(CYPopSelectView *)popSelectView didFinshedChangeCellData:(NSString *)cellData
+{
+    self.popCell.mLabel.text = cellData;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.IndexPath.row inSection:self.IndexPath.section];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
 @end
