@@ -45,6 +45,18 @@
     CYSettingItem *item8 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"产品推荐" vcClass:[CYProductShareViewController class]];
     CYSettingItem *item9 = [CYSettingLabelItem itemWithIcon:@"MoreHelp" title:@"答错题后自动移除"];
     item9.operation = ^(){
+        //创建大小与self.view一样的按钮，把按钮作为一个阴影
+        UIButton *btnCover = [[UIButton alloc]init];
+        //设置按钮大小
+        btnCover.frame = self.view.bounds;
+        //设置按钮的背景色
+        btnCover.backgroundColor = [UIColor blackColor];
+        //设置按钮的透明度
+        btnCover.alpha = 0.6;
+
+        //把按钮加到self.view中
+        [self.view addSubview:btnCover];
+
         CYPopSelectView *popView = [[CYPopSelectView alloc]init];
         //设置popView的尺寸
         CGFloat viewW = self.view.frame.size.width;
