@@ -26,7 +26,7 @@
 {
     self = [super init];
     if (self) {
-        self = [[[NSBundle mainBundle]loadNibNamed:@"CYPopViewSelect" owner:self options:nil]lastObject];
+        self = [[[NSBundle mainBundle]loadNibNamed:@"CYPopSelectView" owner:self options:nil]lastObject];
 
     }
     return self;

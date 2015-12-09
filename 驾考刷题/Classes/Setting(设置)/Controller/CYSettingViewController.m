@@ -52,7 +52,7 @@
         //设置按钮的背景色
         btnCover.backgroundColor = [UIColor blackColor];
         //设置按钮的透明度
-        btnCover.alpha = 0.6;
+        btnCover.alpha = 0.1;
 
         //把按钮加到self.view中
         [self.view addSubview:btnCover];
@@ -66,6 +66,8 @@
         CGFloat popViewX = (viewW - popViewW) * 0.5;
         CGFloat popViewY = (viewH - popViewH) * 0.5;
         popView.frame = CGRectMake(popViewX, popViewY, popViewW, popViewH);
+
+        [self.view addSubview:popView];
     };
 
     
