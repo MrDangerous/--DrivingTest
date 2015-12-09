@@ -21,6 +21,10 @@
  *  开关
  */
 @property(nonatomic, strong)UISwitch *mSwitch;
+/**
+ *  Label
+ */
+@property(nonatomic, strong)UILabel *mLabel;
 @end
 
 
@@ -43,7 +47,16 @@
     }
     return _mSwitch;
 }
-
+-(UILabel *)mLabel
+{
+    if (!_mLabel) {
+        _mLabel = [[UILabel alloc] init];
+        _mLabel.bounds = CGRectMake(0, 0, 80, 33);
+        _mLabel.textAlignment = NSTextAlignmentRight;
+        _mLabel.text = @"1次";
+    }
+    return _mLabel;
+}
 
 -(void)valueChange:(UISwitch *)mSwitch
 {
@@ -85,12 +98,8 @@
         //开关不用选中
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }else if ([item isKindOfClass:[CYSettingLabelItem class]]){//右边添加一个label
-        UILabel *label = [[UILabel alloc]init];
-        label.bounds = CGRectMake(0, 0, 80, 44);
-        //默认设置为1次
-        label.text = @"1次";
-
-        self.accessoryView = label;
+        self.selectionStyle = UITableViewCellSelectionStyleDefault;
+        self.accessoryView = self.mLabel;
     }
 }
 @end
