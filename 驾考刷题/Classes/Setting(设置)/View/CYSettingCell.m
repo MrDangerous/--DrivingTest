@@ -21,10 +21,7 @@
  *  开关
  */
 @property(nonatomic, strong)UISwitch *mSwitch;
-/**
- *  Label
- */
-@property(nonatomic, strong)UILabel *mLabel;
+
 @end
 
 

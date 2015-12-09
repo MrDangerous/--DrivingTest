@@ -14,6 +14,18 @@
 #import "CYProductShareViewController.h"
 #import "CYPopSelectView.h"
 #import "CYSettingLabelItem.h"
+
+@interface CYSettingViewController()
+/**
+ *  用来引用那个阴影属性
+ */
+@property(nonatomic, weak)UIButton *cover;
+/**
+ *  用来引用自定义view
+ */
+@property(nonatomic, weak)CYPopSelectView *popView;
+
+@end
 @implementation CYSettingViewController
 
 - (void)viewDidLoad {
@@ -54,26 +66,54 @@
         //设置按钮的透明度
         btnCover.alpha = 0.1;
 
+        //通过self.cover引用btnCover
+        self.cover = btnCover;
         //把按钮加到self.view中
         [self.view addSubview:btnCover];
+        //为阴影注册一个单击事件
+        [btnCover addTarget:self action:@selector(comeBack) forControlEvents:UIControlEventTouchUpInside];
 
         CYPopSelectView *popView = [[CYPopSelectView alloc]init];
         //设置popView的尺寸
         CGFloat viewW = self.view.frame.size.width;
         CGFloat viewH = self.view.frame.size.height;
-        CGFloat popViewW = 200;
+        CGFloat popViewW = 270;
         CGFloat popViewH = 300;
         CGFloat popViewX = (viewW - popViewW) * 0.5;
         CGFloat popViewY = (viewH - popViewH) * 0.5;
         popView.frame = CGRectMake(popViewX, popViewY, popViewW, popViewH);
-
+        //把自定义view加到self.view中
+        self.popView = popView;
         [self.view addSubview:popView];
     };
-
     
     CYSettingGroup *group2 = [[CYSettingGroup alloc] init];
     group2.items = @[item5,item6,item7,item8,item9];
     [self.cellData addObject:group2];
+}
+//阴影的单击事件
+-(void)comeBack
+{
+    //将popView移除
+    [self.popView removeFromSuperview];
+    //将阴影移除
+    [self.cover removeFromSuperview];
+
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CYSettingCell *cell = [CYSettingCell cellWithTableView:tableView];
+//            cell.accessoryView
+//    cell.mLabel
+    //获取组的数据模型
+    CYSettingGroup *group = self.cellData[indexPath.section];
+
+    //获取行的数据模型
+    CYSettingItem *item = group.items[indexPath.row];
+
+    //设置模型 显示数据
+    cell.item = item;
+    return cell;
 }
 
 

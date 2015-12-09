@@ -9,6 +9,10 @@
 #import "CYPopSelectView.h"
 
 @interface CYPopSelectView()<UITableViewDataSource,UITableViewDelegate>
+/**
+ *  取消按钮单击事件
+ */
+- (IBAction)btnClick:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -33,7 +37,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,9 +46,27 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-
-    cell.textLabel.text = [NSString stringWithFormat:@"test-message-%d", (int)indexPath.row];
-
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    switch (indexPath.row) {
+            case 0: cell.textLabel.text = @"不移除";
+                break;
+            case 1: cell.textLabel.text = @"1次";
+                break;
+            case 2: cell.textLabel.text = @"2次";
+                break;
+            case 3: cell.textLabel.text = @"3次";
+                break;
+            case 4: cell.textLabel.text = @"4次";
+                break;
+            case 5: cell.textLabel.text = @"5次";
+                break;
+            case 6: cell.textLabel.text = @"6次";
+                break;
+                
+            default:
+                break;
+        }
     return cell;
 }
 
@@ -52,5 +74,15 @@
     return 44;
 }
 
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+
+}
+
+
+#pragma mark 按钮的单击事件
+- (IBAction)btnClick:(id)sender {
+
+}
 @end

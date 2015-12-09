@@ -14,4 +14,8 @@
  *  表格的数据模型
  */
 @property(nonatomic, strong)CYSettingItem *item;
+/**
+ *  Label
+ */
+@property(nonatomic, strong)UILabel *mLabel;
 @end
