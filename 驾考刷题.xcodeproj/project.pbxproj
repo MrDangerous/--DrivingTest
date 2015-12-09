@@ -18,6 +18,9 @@
 		18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */; };
 		18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871F1C16C26100E40F34 /* CYSettingGroup.m */; };
 		18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787221C16CA7200E40F34 /* BaseSettingViewController.m */; };
+		18D87EF81C181A11003DC40A /* CYPopViewSelect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D87EF71C181A11003DC40A /* CYPopViewSelect.xib */; };
+		18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D87F001C181EFB003DC40A /* CYPopSelectView.m */; };
+		18D87F071C1823DD003DC40A /* CYSettingLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D87F061C1823DD003DC40A /* CYSettingLabelItem.m */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -106,6 +109,11 @@
 		18D7871F1C16C26100E40F34 /* CYSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingGroup.m; sourceTree = "<group>"; };
 		18D787211C16CA7200E40F34 /* BaseSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSettingViewController.h; path = ../PushAndWarning/BaseSettingViewController.h; sourceTree = "<group>"; };
 		18D787221C16CA7200E40F34 /* BaseSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseSettingViewController.m; path = ../PushAndWarning/BaseSettingViewController.m; sourceTree = "<group>"; };
+		18D87EF71C181A11003DC40A /* CYPopViewSelect.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYPopViewSelect.xib; sourceTree = "<group>"; };
+		18D87EFF1C181EFB003DC40A /* CYPopSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPopSelectView.h; sourceTree = "<group>"; };
+		18D87F001C181EFB003DC40A /* CYPopSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPopSelectView.m; sourceTree = "<group>"; };
+		18D87F051C1823DD003DC40A /* CYSettingLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingLabelItem.h; sourceTree = "<group>"; };
+		18D87F061C1823DD003DC40A /* CYSettingLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingLabelItem.m; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -285,6 +293,8 @@
 				18D7871F1C16C26100E40F34 /* CYSettingGroup.m */,
 				18FD4F501C170F4900D01D96 /* CYProduct.h */,
 				18FD4F511C170F4900D01D96 /* CYProduct.m */,
+				18D87F051C1823DD003DC40A /* CYSettingLabelItem.h */,
+				18D87F061C1823DD003DC40A /* CYSettingLabelItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +314,9 @@
 				18FD4FD51C17151400D01D96 /* CYProductCell.h */,
 				18FD4FD61C17151400D01D96 /* CYProductCell.m */,
 				18FD4FD71C17151400D01D96 /* CYProductCell.xib */,
+				18D87EFF1C181EFB003DC40A /* CYPopSelectView.h */,
+				18D87F001C181EFB003DC40A /* CYPopSelectView.m */,
+				18D87EF71C181A11003DC40A /* CYPopViewSelect.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -833,6 +846,7 @@
 				18FD4FCC1C17116C00D01D96 /* reader@2x.png in Resources */,
 				18DA89A01C146CB700B4631D /* CYFirstSubjectViewController.xib in Resources */,
 				18FD4FCB1C17116C00D01D96 /* open@2x.png in Resources */,
+				18D87EF81C181A11003DC40A /* CYPopViewSelect.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,11 +895,13 @@
 				18D787071C16A28400E40F34 /* CYSettingArrowItem.m in Sources */,
 				18DA899B1C146B5100B4631D /* CYTabbarViewController.m in Sources */,
 				18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */,
+				18D87F071C1823DD003DC40A /* CYSettingLabelItem.m in Sources */,
 				18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */,
 				18D787181C16BF4300E40F34 /* MBProgressHUD+MJ.m in Sources */,
 				18F752AD1C15A8A100D140DF /* CYLeftDrawerTableViewController.m in Sources */,
 				18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
+				18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

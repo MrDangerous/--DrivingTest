@@ -12,7 +12,8 @@
 #import "AboutMeViewController.h"
 #import "CYEncourageController.h"
 #import "CYProductShareViewController.h"
-
+#import "CYPopSelectView.h"
+#import "CYSettingLabelItem.h"
 @implementation CYSettingViewController
 
 - (void)viewDidLoad {
@@ -42,9 +43,10 @@
         });
     };
     CYSettingItem *item8 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"产品推荐" vcClass:[CYProductShareViewController class]];
-    CYSettingItem *item9 = [CYSettingItem itemWithIcon:@"MoreHelp" title:@"答错题后自动移除"];
+    CYSettingItem *item9 = [CYSettingLabelItem itemWithIcon:@"MoreHelp" title:@"答错题后自动移除"];
     item9.operation = ^(){
-
+        CYPopSelectView *view = [[CYPopSelectView alloc]init];
+        view.bounds = CGRectMake(100, 100, 100, 100);
     };
 
     

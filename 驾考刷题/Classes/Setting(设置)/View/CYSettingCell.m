@@ -10,7 +10,7 @@
 #import "CYSettingItem.h"
 #import "CYSettingArrowItem.h"
 #import "CYSettingSwitchItem.h"
-
+#import "CYSettingLabelItem.h"
 
 @interface CYSettingCell()
 /**
@@ -84,14 +84,13 @@
         self.accessoryView = self.mSwitch;
         //开关不用选中
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }else if ([item isKindOfClass:[CYSettingLabelItem class]]){//右边添加一个label
+        UILabel *label = [[UILabel alloc]init];
+        label.bounds = CGRectMake(0, 0, 80, 44);
+        //默认设置为1次
+        label.text = @"1次";
+
+        self.accessoryView = label;
     }
-//    else if ([item isKindOfClass:[CYSettingLabelItem class]]){//右边添加一个label
-//        UILabel *label = [[UILabel alloc]init];
-//        label.bounds = CGRectMake(0, 0, 80, 44);
-//        //默认设置为1次
-//        label.text = @"1次";
-//
-//        self.accessoryView = label;
-//    }
 }
 @end
