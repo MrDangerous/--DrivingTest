@@ -1,5 +1,5 @@
 //
-//  CYSecondSubjectTableViewController.h
+//  CYHeaderView.h
 //  驾考刷题
 //
 //  Created by 程俊亚 on 15/12/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CYSecondSubjectTableViewController : UITableViewController
-
+@interface CYHeaderView : UIView
++(instancetype)headerView;
 @end

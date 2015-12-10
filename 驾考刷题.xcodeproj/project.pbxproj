@@ -37,13 +37,14 @@
 		18DA89AE1C14722F00B4631D /* CYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89AD1C14722F00B4631D /* CYNavigationViewController.m */; };
 		18DA89B21C14753400B4631D /* CYThirdSubjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89B01C14753400B4631D /* CYThirdSubjectTableViewController.m */; };
 		18DA89B31C14753400B4631D /* CYThirdSubjectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89B11C14753400B4631D /* CYThirdSubjectTableViewController.xib */; };
-		18DA89B71C14756C00B4631D /* CYSecondSubjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89B51C14756C00B4631D /* CYSecondSubjectTableViewController.m */; };
-		18DA89B81C14756C00B4631D /* CYSecondSubjectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89B61C14756C00B4631D /* CYSecondSubjectTableViewController.xib */; };
 		18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89BA1C14758D00B4631D /* CYForthSubjectViewController.m */; };
 		18DA89BD1C14758D00B4631D /* CYForthSubjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89BB1C14758D00B4631D /* CYForthSubjectViewController.xib */; };
 		18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C21C14798600B4631D /* UIBarButtonItem+Extension.m */; };
 		18DA89C61C14798600B4631D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C41C14798600B4631D /* UIView+Extension.m */; };
 		18DA89C91C14844200B4631D /* CYTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89C81C14844200B4631D /* CYTabbar.m */; };
+		18DBCB561C194AA9002090D8 /* CYHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DBCB551C194AA9002090D8 /* CYHeadView.xib */; };
+		18DBCB591C194DEF002090D8 /* CYHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBCB581C194DEF002090D8 /* CYHeaderView.m */; };
+		18DBCB5C1C194EBF002090D8 /* CYSecondSubjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBCB5B1C194EBF002090D8 /* CYSecondSubjectTableViewController.m */; };
 		18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7529F1C1587A600D140DF /* MMDrawerBarButtonItem.m */; };
 		18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A21C1587A600D140DF /* MMDrawerController.m */; };
 		18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F752A41C1587A600D140DF /* MMDrawerVisualState.m */; };
@@ -145,9 +146,6 @@
 		18DA89AF1C14753400B4631D /* CYThirdSubjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYThirdSubjectTableViewController.h; sourceTree = "<group>"; };
 		18DA89B01C14753400B4631D /* CYThirdSubjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYThirdSubjectTableViewController.m; sourceTree = "<group>"; };
 		18DA89B11C14753400B4631D /* CYThirdSubjectTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYThirdSubjectTableViewController.xib; sourceTree = "<group>"; };
-		18DA89B41C14756C00B4631D /* CYSecondSubjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSecondSubjectTableViewController.h; sourceTree = "<group>"; };
-		18DA89B51C14756C00B4631D /* CYSecondSubjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSecondSubjectTableViewController.m; sourceTree = "<group>"; };
-		18DA89B61C14756C00B4631D /* CYSecondSubjectTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYSecondSubjectTableViewController.xib; sourceTree = "<group>"; };
 		18DA89B91C14758D00B4631D /* CYForthSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYForthSubjectViewController.h; sourceTree = "<group>"; };
 		18DA89BA1C14758D00B4631D /* CYForthSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYForthSubjectViewController.m; sourceTree = "<group>"; };
 		18DA89BB1C14758D00B4631D /* CYForthSubjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYForthSubjectViewController.xib; sourceTree = "<group>"; };
@@ -157,6 +155,11 @@
 		18DA89C41C14798600B4631D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		18DA89C71C14844200B4631D /* CYTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYTabbar.h; sourceTree = "<group>"; };
 		18DA89C81C14844200B4631D /* CYTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYTabbar.m; sourceTree = "<group>"; };
+		18DBCB551C194AA9002090D8 /* CYHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYHeadView.xib; sourceTree = "<group>"; };
+		18DBCB571C194DEF002090D8 /* CYHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYHeaderView.h; sourceTree = "<group>"; };
+		18DBCB581C194DEF002090D8 /* CYHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYHeaderView.m; sourceTree = "<group>"; };
+		18DBCB5A1C194EBF002090D8 /* CYSecondSubjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSecondSubjectTableViewController.h; sourceTree = "<group>"; };
+		18DBCB5B1C194EBF002090D8 /* CYSecondSubjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSecondSubjectTableViewController.m; sourceTree = "<group>"; };
 		18F7529E1C1587A600D140DF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
 		18F7529F1C1587A600D140DF /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
 		18F752A01C1587A600D140DF /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
@@ -598,9 +601,8 @@
 		18DA89901C14283F00B4631D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18DA89B41C14756C00B4631D /* CYSecondSubjectTableViewController.h */,
-				18DA89B51C14756C00B4631D /* CYSecondSubjectTableViewController.m */,
-				18DA89B61C14756C00B4631D /* CYSecondSubjectTableViewController.xib */,
+				18DBCB5A1C194EBF002090D8 /* CYSecondSubjectTableViewController.h */,
+				18DBCB5B1C194EBF002090D8 /* CYSecondSubjectTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -622,6 +624,9 @@
 		18DA89931C14283F00B4631D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18DBCB571C194DEF002090D8 /* CYHeaderView.h */,
+				18DBCB581C194DEF002090D8 /* CYHeaderView.m */,
+				18DBCB551C194AA9002090D8 /* CYHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -833,8 +838,8 @@
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
 				18D87F0B1C1850CE003DC40A /* CYPopSelectView.xib in Resources */,
 				18FD4FC71C17116C00D01D96 /* magicbook@2x.png in Resources */,
+				18DBCB561C194AA9002090D8 /* CYHeadView.xib in Resources */,
 				18FD4FCF1C17116C00D01D96 /* youdao@2x.png in Resources */,
-				18DA89B81C14756C00B4631D /* CYSecondSubjectTableViewController.xib in Resources */,
 				18DA89551C13D44400B4631D /* Assets.xcassets in Resources */,
 				18FD4FC81C17116C00D01D96 /* movie@2x.png in Resources */,
 				18FD4FD01C17116C00D01D96 /* youdaonote@2x.png in Resources */,
@@ -875,7 +880,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DA89B71C14756C00B4631D /* CYSecondSubjectTableViewController.m in Sources */,
 				18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */,
 				18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */,
 				18D8B5601C191EB000F87435 /* CYLeftDrawerController.m in Sources */,
@@ -890,6 +894,7 @@
 				18F752A81C1587A600D140DF /* MMDrawerController.m in Sources */,
 				18F752A91C1587A600D140DF /* MMDrawerVisualState.m in Sources */,
 				18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */,
+				18DBCB591C194DEF002090D8 /* CYHeaderView.m in Sources */,
 				18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */,
 				18D7870A1C16A2AC00E40F34 /* CYSettingSwitchItem.m in Sources */,
 				18FD4F281C170A0500D01D96 /* CYProductShareViewController.m in Sources */,
@@ -905,6 +910,7 @@
 				18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */,
+				18DBCB5C1C194EBF002090D8 /* CYSecondSubjectTableViewController.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
 				189A34C81C19157600E09B86 /* CYEncourageMeController.m in Sources */,
 			);
