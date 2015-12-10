@@ -8,8 +8,8 @@
 
 #import "CYTabbarViewController.h"
 #import "CYFirstSubjectViewController.h"
-#import "CYSecondSubjectTableViewController.h"
-#import "CYThirdSubjectTableViewController.h"
+#import "CYSecondSubjectController.h"
+#import "CYthirdSubjectViewController.h"
 #import "CYForthSubjectViewController.h"
 #import "CYNavigationViewController.h"
 #import "CYTabBar.h"
@@ -26,15 +26,15 @@
 
     //1.初始化子控制器
     CYFirstSubjectViewController *firstSubject = [[CYFirstSubjectViewController alloc]init];
-    firstSubject.view.backgroundColor = CYRandomColor;
+
     [self addChildVc:firstSubject title:@"科目一" image:@"home_icon_1" selectedImage:@"home_icon_1"];
 
-    CYSecondSubjectTableViewController *secondSubject = [[CYSecondSubjectTableViewController alloc]init];
-      secondSubject.view.backgroundColor = CYRandomColor;
+    CYSecondSubjectController *secondSubject = [[CYSecondSubjectController alloc]init];
+
     [self addChildVc:secondSubject title:@"科目二" image:@"home_icon_2" selectedImage:@"home_icon_2"];
 
-    CYThirdSubjectTableViewController *thirdSubject = [[CYThirdSubjectTableViewController alloc]init];
-      thirdSubject.view.backgroundColor = CYRandomColor;
+    CYthirdSubjectViewController *thirdSubject = [[CYthirdSubjectViewController alloc]init];
+
     [self addChildVc:thirdSubject title:@"科目三" image:@"home_icon_3" selectedImage:@"home_icon_3"];
 
     CYForthSubjectViewController *forthSubject = [[CYForthSubjectViewController alloc]init];

@@ -1,25 +1,28 @@
 //
-//  CYForthSubjectViewController.m
+//  CYthirdSubjectViewController.m
 //  驾考刷题
 //
-//  Created by 程俊亚 on 15/12/6.
+//  Created by 程俊亚 on 15/12/10.
 //  Copyright © 2015年 john. All rights reserved.
 //
 
-#import "CYForthSubjectViewController.h"
+#import "CYthirdSubjectViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "CYLeftDrawerController.h"
 #import "CYSettingViewController.h"
-@interface CYForthSubjectViewController ()
+@interface CYthirdSubjectViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 
 @end
 
-@implementation CYForthSubjectViewController
+@implementation CYthirdSubjectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupLeftMenuButton];
+    //设置内边距
+    self.scrollview.contentInset = UIEdgeInsetsMake(0, 0, 44, 0);
 }
 -(void)setupLeftMenuButton
 {

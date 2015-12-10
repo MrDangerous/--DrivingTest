@@ -51,8 +51,8 @@
 }
 -(void)awakeFromNib
 {
-    CGFloat imgW = 335;
-    CGFloat imgH = 140;
+    CGFloat imgW = 320;
+    CGFloat imgH = 130;
     CGFloat imgY = 0;
     //动态创建UIImageView添加到UIScollView中
     for (int i = 0; i < 5; i++) {
