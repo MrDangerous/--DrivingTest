@@ -53,9 +53,9 @@
     static NSString *ID = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     //设置数据
     cell.textLabel.text = self.cellData[indexPath.row];

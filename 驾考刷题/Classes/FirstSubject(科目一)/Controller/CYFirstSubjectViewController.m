@@ -9,7 +9,7 @@
 #import "CYFirstSubjectViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "MMDrawerBarButtonItem.h"
-#import "CYLeftDrawerTableViewController.h"
+#import "CYLeftDrawerController.h"
 #import "CYSettingViewController.h"
 @interface CYFirstSubjectViewController ()
 

@@ -7,7 +7,7 @@
 //
 
 #import "CYNavigationViewController.h"
-#import "CYLeftDrawerTableViewController.h"
+#import "CYLeftDrawerController.h"
 
 @interface CYNavigationViewController ()
 
