@@ -8,13 +8,24 @@
 
 #import "CYLeftDrawerController.h"
 #import "CYSettingCell.h"
+#import "CYSettingArrowItem.h"
+#import "CYSettingGroup.h"
 @interface CYLeftDrawerController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property(nonatomic, strong)NSArray *cellData;
+@property(nonatomic, strong)NSMutableArray *cellData;
 @end
 
 @implementation CYLeftDrawerController
+
+
+-(NSMutableArray *)cellData
+{
+    if (!_cellData) {
+        self.cellData = [[NSMutableArray alloc]init];
+    }
+    return _cellData;
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -31,29 +42,48 @@
     //去除状态栏
     [self prefersStatusBarHidden];
 
-}
+    //设置数据
 
--(NSArray *)cellData
-{
-    if (!_cellData) {
-        self.cellData = [[NSArray alloc]init];
-        self.cellData = @[@"消息中心",@"丢肥皂",@"扫一扫",@"我的题库",@"意见反馈"];
-    }
-    return _cellData;
-}
+    //初始化数据
+    //第一组数据
+    CYSettingItem *item1 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"消息中心"];
+    CYSettingItem *item2 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"扫一扫"];
+    CYSettingItem *item3 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"丢肥皂"];
+    CYSettingItem *item4 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"我的题库"];
+    CYSettingItem *item5 = [CYSettingArrowItem itemWithIcon:@"handShake" title:@"意见反馈"];
+    CYSettingGroup *group1 = [[CYSettingGroup alloc] init];
+    group1.items = @[item1,item2,item3,item4,item5];
+    [self.cellData addObject:group1];
 
+}
 #pragma mark - 加载数据
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#pragma mark - 组的个数
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.cellData.count;
+}
+#pragma mark - 组的行数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //组数据
+    CYSettingGroup *group = self.cellData[section];
+    return group.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CYSettingCell *cell = [CYSettingCell cellWithTableView:tableView];
+
+    //获取组的数据模型
+    CYSettingGroup *group = self.cellData[indexPath.section];
+
+    //获取行的数据模型
+    CYSettingItem *item = group.items[indexPath.row];
+
+    //设置模型 显示数据
+    cell.item = item;
     //设置cell样式
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.font = [UIFont systemFontOfSize:16];
-    //设置数据
-    cell.textLabel.text = self.cellData[indexPath.row];
+
     return cell;
 }
 
