@@ -8,60 +8,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Xyv-Vq-yRE" customClass="CYHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv0-rQ-0so">
-                    <rect key="frame" x="0.0" y="155" width="375" height="1"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="5Sd-7p-eSj"/>
-                    </constraints>
-                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-bz-kQU">
-                    <rect key="frame" x="10" y="10" width="355" height="140"/>
-                    <color key="backgroundColor" red="0.3603515625" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="140" id="3TI-lL-XCN"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                    <connections>
+                        <outlet property="delegate" destination="Xyv-Vq-yRE" id="Vf4-6F-3gP"/>
+                    </connections>
                 </scrollView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大王叫我来巡山" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOA-Vo-Udv">
-                    <rect key="frame" x="0.0" y="161" width="375" height="28"/>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-Qv-36A">
+                    <rect key="frame" x="128" y="90" width="120" height="37"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="28" id="hhH-Vr-Vck"/>
+                        <constraint firstAttribute="height" constant="37" id="KaQ-xW-pvY"/>
+                        <constraint firstAttribute="width" constant="120" id="eZY-cO-wBl"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDw-3v-dgc">
-                    <rect key="frame" x="0.0" y="194" width="375" height="1"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="dlw-5j-PPf"/>
-                    </constraints>
-                </view>
+                    <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="xv0-rQ-0so" firstAttribute="leading" secondItem="Xyv-Vq-yRE" secondAttribute="leading" id="2PW-r3-erf"/>
-                <constraint firstAttribute="trailing" secondItem="JDw-3v-dgc" secondAttribute="trailing" id="ECE-Kt-Xj6"/>
-                <constraint firstItem="vLZ-bz-kQU" firstAttribute="leading" secondItem="Xyv-Vq-yRE" secondAttribute="leading" constant="10" id="Fq6-IS-2AY"/>
-                <constraint firstItem="JDw-3v-dgc" firstAttribute="leading" secondItem="Xyv-Vq-yRE" secondAttribute="leading" id="Fr6-jV-6Y7"/>
-                <constraint firstItem="vLZ-bz-kQU" firstAttribute="top" secondItem="Xyv-Vq-yRE" secondAttribute="top" constant="10" id="Ilq-t4-VoT"/>
-                <constraint firstAttribute="trailing" secondItem="xv0-rQ-0so" secondAttribute="trailing" id="LHu-ZP-yS5"/>
-                <constraint firstItem="uOA-Vo-Udv" firstAttribute="leading" secondItem="Xyv-Vq-yRE" secondAttribute="leading" id="Mf0-Kk-6w3"/>
-                <constraint firstItem="JDw-3v-dgc" firstAttribute="top" secondItem="uOA-Vo-Udv" secondAttribute="bottom" constant="5" id="OIM-6X-yxJ"/>
-                <constraint firstItem="xv0-rQ-0so" firstAttribute="top" secondItem="vLZ-bz-kQU" secondAttribute="bottom" constant="5" id="TH1-rK-tJl"/>
-                <constraint firstItem="uOA-Vo-Udv" firstAttribute="top" secondItem="xv0-rQ-0so" secondAttribute="bottom" constant="5" id="Y8K-wJ-Tb8"/>
-                <constraint firstAttribute="trailing" secondItem="uOA-Vo-Udv" secondAttribute="trailing" id="gaw-kN-bHJ"/>
-                <constraint firstAttribute="trailing" secondItem="vLZ-bz-kQU" secondAttribute="trailing" constant="10" id="sV0-Uk-6CX"/>
+                <constraint firstAttribute="bottom" secondItem="KcB-Qv-36A" secondAttribute="bottom" constant="3" id="KdQ-WV-8Za"/>
+                <constraint firstItem="vLZ-bz-kQU" firstAttribute="leading" secondItem="Xyv-Vq-yRE" secondAttribute="leading" id="MCd-QQ-mUH"/>
+                <constraint firstAttribute="bottom" secondItem="vLZ-bz-kQU" secondAttribute="bottom" id="Pr6-Or-IC2"/>
+                <constraint firstAttribute="trailing" secondItem="vLZ-bz-kQU" secondAttribute="trailing" id="Rcu-AG-Tr1"/>
+                <constraint firstItem="vLZ-bz-kQU" firstAttribute="top" secondItem="Xyv-Vq-yRE" secondAttribute="top" id="g7J-qT-faI"/>
+                <constraint firstItem="KcB-Qv-36A" firstAttribute="centerX" secondItem="Xyv-Vq-yRE" secondAttribute="centerX" id="wn8-d0-UJg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="pageControl" destination="KcB-Qv-36A" id="Hl3-za-3Rg"/>
                 <outlet property="scrollView" destination="vLZ-bz-kQU" id="73P-rc-Mvz"/>
             </connections>
-            <point key="canvasLocation" x="156.5" y="340"/>
+            <point key="canvasLocation" x="182.5" y="314"/>
         </view>
     </objects>
 </document>
