@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189A34C81C19157600E09B86 /* CYEncourageMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A34C61C19157600E09B86 /* CYEncourageMeController.m */; };
+		189A34C91C19157600E09B86 /* CYEncourageMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189A34C71C19157600E09B86 /* CYEncourageMeController.xib */; };
 		18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787001C16825000E40F34 /* CYSettingViewController.m */; };
 		18D787041C16828400E40F34 /* CYSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787031C16828400E40F34 /* CYSettingItem.m */; };
 		18D787071C16A28400E40F34 /* CYSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787061C16A28400E40F34 /* CYSettingArrowItem.m */; };
@@ -67,7 +69,6 @@
 		18FD4FD11C17116C00D01D96 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FC01C17116C00D01D96 /* products.json */; };
 		18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FD61C17151400D01D96 /* CYProductCell.m */; };
 		18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FD71C17151400D01D96 /* CYProductCell.xib */; };
-		18FD4FDD1C17234200D01D96 /* CYEncourageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FDB1C17234200D01D96 /* CYEncourageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189A34C51C19157600E09B86 /* CYEncourageMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEncourageMeController.h; sourceTree = "<group>"; };
+		189A34C61C19157600E09B86 /* CYEncourageMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEncourageMeController.m; sourceTree = "<group>"; };
+		189A34C71C19157600E09B86 /* CYEncourageMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYEncourageMeController.xib; sourceTree = "<group>"; };
 		18D786FF1C16825000E40F34 /* CYSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingViewController.h; sourceTree = "<group>"; };
 		18D787001C16825000E40F34 /* CYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingViewController.m; sourceTree = "<group>"; };
 		18D787021C16828400E40F34 /* CYSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingItem.h; sourceTree = "<group>"; };
@@ -186,8 +190,6 @@
 		18FD4FD51C17151400D01D96 /* CYProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProductCell.h; sourceTree = "<group>"; };
 		18FD4FD61C17151400D01D96 /* CYProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProductCell.m; sourceTree = "<group>"; };
 		18FD4FD71C17151400D01D96 /* CYProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYProductCell.xib; sourceTree = "<group>"; };
-		18FD4FDA1C17234200D01D96 /* CYEncourageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEncourageController.h; sourceTree = "<group>"; };
-		18FD4FDB1C17234200D01D96 /* CYEncourageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEncourageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,8 +330,9 @@
 				18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */,
 				18FD4F261C170A0500D01D96 /* CYProductShareViewController.h */,
 				18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */,
-				18FD4FDA1C17234200D01D96 /* CYEncourageController.h */,
-				18FD4FDB1C17234200D01D96 /* CYEncourageController.m */,
+				189A34C51C19157600E09B86 /* CYEncourageMeController.h */,
+				189A34C61C19157600E09B86 /* CYEncourageMeController.m */,
+				189A34C71C19157600E09B86 /* CYEncourageMeController.xib */,
 			);
 			path = PushAndWarning;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				18FD4FC91C17116C00D01D96 /* newb@2x.png in Resources */,
 				18D787191C16BF4300E40F34 /* MBProgressHUD.bundle in Resources */,
 				18DA89B31C14753400B4631D /* CYThirdSubjectTableViewController.xib in Resources */,
+				189A34C91C19157600E09B86 /* CYEncourageMeController.xib in Resources */,
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
 				18D87F0B1C1850CE003DC40A /* CYPopSelectView.xib in Resources */,
 				18FD4FC71C17116C00D01D96 /* magicbook@2x.png in Resources */,
@@ -874,7 +878,6 @@
 				18DA89B71C14756C00B4631D /* CYSecondSubjectTableViewController.m in Sources */,
 				18F752A71C1587A600D140DF /* MMDrawerBarButtonItem.m in Sources */,
 				18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */,
-				18FD4FDD1C17234200D01D96 /* CYEncourageController.m in Sources */,
 				18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */,
 				18DA899F1C146CB700B4631D /* CYFirstSubjectViewController.m in Sources */,
 				18F752AA1C1587A600D140DF /* UIViewController+MMDrawerController.m in Sources */,
@@ -903,6 +906,7 @@
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
+				189A34C81C19157600E09B86 /* CYEncourageMeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 #import "CYSettingCell.h"
 #import "MBProgressHUD+MJ.h"
 #import "AboutMeViewController.h"
-#import "CYEncourageController.h"
+#import "CYEncourageMeController.h"
 #import "CYProductShareViewController.h"
 #import "CYPopSelectView.h"
 #import "CYSettingLabelItem.h"
@@ -46,7 +46,7 @@
     //显示数据
 
     CYSettingItem *item5 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"关于我" vcClass:[AboutMeViewController class]];
-    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"vcClass:[CYEncourageController class]];
+    CYSettingItem *item6 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"鼓励我"vcClass:[CYEncourageMeController class]];
     CYSettingItem *item7 = [CYSettingArrowItem itemWithIcon:@"MoreHelp" title:@"检查版本更新"];
     //版本更新是一个特殊的操作，把这个操作存放在block属性中
     item7.operation = ^(){
