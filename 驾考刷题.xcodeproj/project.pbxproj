@@ -1043,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (76V5688MH4)";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";
 				INFOPLIST_FILE = "驾考刷题/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1055,6 +1056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (76V5688MH4)";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";
 				INFOPLIST_FILE = "驾考刷题/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
