@@ -23,7 +23,7 @@
 }
 -(void)setupLeftMenuButton
 {
-    //创建按钮
+    //创建按钮啦啦啦
     MMDrawerBarButtonItem *leftDrawerButton = [[MMDrawerBarButtonItem alloc]initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     //为navigationItem添加LeftBarButtonItem
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
