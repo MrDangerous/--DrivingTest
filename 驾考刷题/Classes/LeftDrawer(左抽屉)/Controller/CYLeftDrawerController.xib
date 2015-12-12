@@ -34,7 +34,7 @@
                             <state key="normal" title="点击登录"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.46274509800000002" green="0.96078431369999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="yK9-EM-oDu" firstAttribute="leading" secondItem="HBu-Tw-QCr" secondAttribute="leading" constant="89" id="0z1-Qd-A9x"/>
                         <constraint firstItem="U3y-BO-uO7" firstAttribute="top" secondItem="HBu-Tw-QCr" secondAttribute="top" constant="18" id="QBC-Hq-ekJ"/>

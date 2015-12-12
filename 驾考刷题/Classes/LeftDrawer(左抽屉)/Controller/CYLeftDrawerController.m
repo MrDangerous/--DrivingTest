@@ -40,8 +40,6 @@
     [super viewDidLoad];
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
-    //去除状态栏
-//    self.prefersStatusBarHidden = YES;
 
     //设置数据
 
