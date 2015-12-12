@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="CYJumpCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEF-ad-VMy">
+                        <rect key="frame" x="8" y="8" width="34" height="34"/>
+                        <state key="normal" title="1" backgroundImage="Answer_jump_cell_1-1">
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qEF-ad-VMy" secondAttribute="bottom" constant="8" id="1kd-cv-laa"/>
+                <constraint firstItem="qEF-ad-VMy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Rdr-Vi-QRB"/>
+                <constraint firstAttribute="trailing" secondItem="qEF-ad-VMy" secondAttribute="trailing" constant="8" id="eVv-If-8G3"/>
+                <constraint firstItem="qEF-ad-VMy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="eir-de-RKI"/>
+            </constraints>
+            <connections>
+                <outlet property="btn" destination="qEF-ad-VMy" id="U01-Hi-SVv"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Answer_jump_cell_1-1" width="23" height="23"/>
+    </resources>
+</document>

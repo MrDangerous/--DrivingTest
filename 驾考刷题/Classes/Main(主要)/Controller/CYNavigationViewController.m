@@ -76,10 +76,10 @@
 - (void)back {
     [self popViewControllerAnimated:YES];
 }
-///**
-// *  设置状态栏样式
-// */
-//-(UIStatusBarStyle)preferredStatusBarStyle{
-//    return UIStatusBarStyleLightContent;
-//}
+/**
+ *  设置状态栏样式
+ */
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 @end

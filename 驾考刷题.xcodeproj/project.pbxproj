@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1801EA941C1AA91300FA82EB /* CYQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801EA921C1AA91300FA82EB /* CYQuestionViewController.m */; };
+		1801EA951C1AA91300FA82EB /* CYQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1801EA931C1AA91300FA82EB /* CYQuestionViewController.xib */; };
 		1859AFDE1C19A4230037BF56 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFD01C19A4230037BF56 /* MBProgressHUD+MJ.m */; };
 		1859AFDF1C19A4230037BF56 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1859AFD11C19A4230037BF56 /* MBProgressHUD.bundle */; };
 		1859AFE01C19A4230037BF56 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFD31C19A4230037BF56 /* MBProgressHUD.m */; };
@@ -14,6 +16,7 @@
 		1859AFE21C19A4230037BF56 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFD91C19A4230037BF56 /* MMDrawerController.m */; };
 		1859AFE31C19A4230037BF56 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFDB1C19A4230037BF56 /* MMDrawerVisualState.m */; };
 		1859AFE41C19A4230037BF56 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFDD1C19A4230037BF56 /* UIViewController+MMDrawerController.m */; };
+		1892A0791C1AC02A00BE889B /* CYJumpToCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1892A0781C1AC02A00BE889B /* CYJumpToCollectionView.xib */; };
 		189A34C81C19157600E09B86 /* CYEncourageMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A34C61C19157600E09B86 /* CYEncourageMeController.m */; };
 		189A34C91C19157600E09B86 /* CYEncourageMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189A34C71C19157600E09B86 /* CYEncourageMeController.xib */; };
 		18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787001C16825000E40F34 /* CYSettingViewController.m */; };
@@ -49,6 +52,9 @@
 		18D8C1271C19B94A00402F6A /* youdaonote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D8C1161C19B94A00402F6A /* youdaonote@2x.png */; };
 		18D8C1281C19B94A00402F6A /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 18D8C1171C19B94A00402F6A /* products.json */; };
 		18D8C12E1C19C65300402F6A /* CYSecondSubjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8C12D1C19C65300402F6A /* CYSecondSubjectController.m */; };
+		18D8C3AA1C1AEC6C00967B02 /* CYJumpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8C3A81C1AEC6C00967B02 /* CYJumpCell.m */; };
+		18D8C3AB1C1AEC6C00967B02 /* CYJumpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D8C3A91C1AEC6C00967B02 /* CYJumpCell.xib */; };
+		18D8C3B11C1AF9E800967B02 /* CYJumpToCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -70,6 +76,7 @@
 		18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4F511C170F4900D01D96 /* CYProduct.m */; };
 		18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FD61C17151400D01D96 /* CYProductCell.m */; };
 		18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FD4FD71C17151400D01D96 /* CYProductCell.xib */; };
+		FC6BA1D3812CCBE8BE05FC36 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D56638B8F0386810C71CB4A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1801EA911C1AA91300FA82EB /* CYQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYQuestionViewController.h; sourceTree = "<group>"; };
+		1801EA921C1AA91300FA82EB /* CYQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYQuestionViewController.m; sourceTree = "<group>"; };
+		1801EA931C1AA91300FA82EB /* CYQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYQuestionViewController.xib; sourceTree = "<group>"; };
 		1859AFCF1C19A4230037BF56 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		1859AFD01C19A4230037BF56 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		1859AFD11C19A4230037BF56 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 		1859AFDB1C19A4230037BF56 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
 		1859AFDC1C19A4230037BF56 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		1859AFDD1C19A4230037BF56 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		1892A0781C1AC02A00BE889B /* CYJumpToCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYJumpToCollectionView.xib; sourceTree = "<group>"; };
 		189A34C51C19157600E09B86 /* CYEncourageMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYEncourageMeController.h; sourceTree = "<group>"; };
 		189A34C61C19157600E09B86 /* CYEncourageMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYEncourageMeController.m; sourceTree = "<group>"; };
 		189A34C71C19157600E09B86 /* CYEncourageMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYEncourageMeController.xib; sourceTree = "<group>"; };
@@ -153,6 +164,11 @@
 		18D8C1171C19B94A00402F6A /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		18D8C12C1C19C65300402F6A /* CYSecondSubjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSecondSubjectController.h; sourceTree = "<group>"; };
 		18D8C12D1C19C65300402F6A /* CYSecondSubjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSecondSubjectController.m; sourceTree = "<group>"; };
+		18D8C3A71C1AEC6C00967B02 /* CYJumpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYJumpCell.h; path = ../Controller/CYJumpCell.h; sourceTree = "<group>"; };
+		18D8C3A81C1AEC6C00967B02 /* CYJumpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYJumpCell.m; path = ../Controller/CYJumpCell.m; sourceTree = "<group>"; };
+		18D8C3A91C1AEC6C00967B02 /* CYJumpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CYJumpCell.xib; path = ../Controller/CYJumpCell.xib; sourceTree = "<group>"; };
+		18D8C3AF1C1AF9E800967B02 /* CYJumpToCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYJumpToCollectionView.h; sourceTree = "<group>"; };
+		18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYJumpToCollectionView.m; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +209,9 @@
 		18FD4FD51C17151400D01D96 /* CYProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProductCell.h; sourceTree = "<group>"; };
 		18FD4FD61C17151400D01D96 /* CYProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProductCell.m; sourceTree = "<group>"; };
 		18FD4FD71C17151400D01D96 /* CYProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYProductCell.xib; sourceTree = "<group>"; };
+		9D56638B8F0386810C71CB4A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB753EE1F56EF8BC924E4D1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F9098E73B1BB11059AF68843 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6BA1D3812CCBE8BE05FC36 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +240,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1801EA8C1C1AA7B400FA82EB /* QuestionView(答题界面) */ = {
+			isa = PBXGroup;
+			children = (
+				1801EA8D1C1AA7B400FA82EB /* Controller */,
+				1801EA8E1C1AA7B400FA82EB /* Model */,
+				1801EA8F1C1AA7B400FA82EB /* Tool */,
+				1801EA901C1AA7B400FA82EB /* View */,
+			);
+			path = "QuestionView(答题界面)";
+			sourceTree = "<group>";
+		};
+		1801EA8D1C1AA7B400FA82EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1801EA911C1AA91300FA82EB /* CYQuestionViewController.h */,
+				1801EA921C1AA91300FA82EB /* CYQuestionViewController.m */,
+				1801EA931C1AA91300FA82EB /* CYQuestionViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1801EA8E1C1AA7B400FA82EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1801EA8F1C1AA7B400FA82EB /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		1801EA901C1AA7B400FA82EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18D8C3A71C1AEC6C00967B02 /* CYJumpCell.h */,
+				18D8C3A81C1AEC6C00967B02 /* CYJumpCell.m */,
+				18D8C3A91C1AEC6C00967B02 /* CYJumpCell.xib */,
+				1892A0781C1AC02A00BE889B /* CYJumpToCollectionView.xib */,
+				18D8C3AF1C1AF9E800967B02 /* CYJumpToCollectionView.h */,
+				18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1859AFCD1C19A3B20037BF56 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,8 +370,8 @@
 		18D786FA1C1681E300E40F34 /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
-				18D7870E1C16B33A00E40F34 /* PushAndWarning */,
 				18D786FB1C1681E300E40F34 /* Controller */,
+				18D7870E1C16B33A00E40F34 /* PushAndWarning */,
 				18D786FC1C1681E300E40F34 /* Model */,
 				18D786FD1C1681E300E40F34 /* Tool */,
 				18D786FE1C1681E300E40F34 /* View */,
@@ -416,6 +484,8 @@
 				18DA89611C13D44400B4631D /* 驾考刷题Tests */,
 				18DA896C1C13D44400B4631D /* 驾考刷题UITests */,
 				18DA89461C13D44400B4631D /* Products */,
+				DAB0D7727E5EE3836EBE8A58 /* Pods */,
+				83DACD4132D39FA22255510D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -472,6 +542,7 @@
 		18DA897C1C14283E00B4631D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1801EA8C1C1AA7B400FA82EB /* QuestionView(答题界面) */,
 				18D786FA1C1681E300E40F34 /* Setting(设置) */,
 				18D786F41C167CCB00E40F34 /* LeftDrawer(左抽屉) */,
 				18DA897D1C14283E00B4631D /* FirstSubject(科目一) */,
@@ -721,6 +792,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		83DACD4132D39FA22255510D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D56638B8F0386810C71CB4A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAB0D7727E5EE3836EBE8A58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9098E73B1BB11059AF68843 /* Pods.debug.xcconfig */,
+				BB753EE1F56EF8BC924E4D1C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -728,9 +816,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18DA89721C13D44400B4631D /* Build configuration list for PBXNativeTarget "驾考刷题" */;
 			buildPhases = (
+				A966F4AA2472C7E846A24F84 /* Check Pods Manifest.lock */,
 				18DA89411C13D44400B4631D /* Sources */,
 				18DA89421C13D44400B4631D /* Frameworks */,
 				18DA89431C13D44400B4631D /* Resources */,
+				2DA602D7A4A51E9F20EF3A76 /* Embed Pods Frameworks */,
+				A3A3DC04EE46F4F331277AEC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -834,6 +925,7 @@
 				18D8C1261C19B94A00402F6A /* youdao@2x.png in Resources */,
 				18D8C11E1C19B94A00402F6A /* magicbook@2x.png in Resources */,
 				189A34C91C19157600E09B86 /* CYEncourageMeController.xib in Resources */,
+				18D8C3AB1C1AEC6C00967B02 /* CYJumpCell.xib in Resources */,
 				18D8C1231C19B94A00402F6A /* reader@2x.png in Resources */,
 				18D8C1271C19B94A00402F6A /* youdaonote@2x.png in Resources */,
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
@@ -845,6 +937,8 @@
 				18D8C1221C19B94A00402F6A /* open@2x.png in Resources */,
 				18DBCB561C194AA9002090D8 /* CYHeadView.xib in Resources */,
 				18DA89551C13D44400B4631D /* Assets.xcassets in Resources */,
+				1892A0791C1AC02A00BE889B /* CYJumpToCollectionView.xib in Resources */,
+				1801EA951C1AA91300FA82EB /* CYQuestionViewController.xib in Resources */,
 				1859AFDF1C19A4230037BF56 /* MBProgressHUD.bundle in Resources */,
 				18D8C1211C19B94A00402F6A /* newsapp@2x.png in Resources */,
 				18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */,
@@ -875,6 +969,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DA602D7A4A51E9F20EF3A76 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A3DC04EE46F4F331277AEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A966F4AA2472C7E846A24F84 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18DA89411C13D44400B4631D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -883,6 +1025,7 @@
 				1859AFE41C19A4230037BF56 /* UIViewController+MMDrawerController.m in Sources */,
 				18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */,
 				18D8B5601C191EB000F87435 /* CYLeftDrawerController.m in Sources */,
+				18D8C3AA1C1AEC6C00967B02 /* CYJumpCell.m in Sources */,
 				18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */,
 				18D8C12E1C19C65300402F6A /* CYSecondSubjectController.m in Sources */,
 				18DA899F1C146CB700B4631D /* CYFirstSubjectViewController.m in Sources */,
@@ -894,6 +1037,7 @@
 				18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */,
 				1859AFE01C19A4230037BF56 /* MBProgressHUD.m in Sources */,
 				18DA89AE1C14722F00B4631D /* CYNavigationViewController.m in Sources */,
+				1801EA941C1AA91300FA82EB /* CYQuestionViewController.m in Sources */,
 				18DA89C51C14798600B4631D /* UIBarButtonItem+Extension.m in Sources */,
 				18DBCB591C194DEF002090D8 /* CYHeaderView.m in Sources */,
 				18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */,
@@ -911,6 +1055,7 @@
 				18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
 				18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */,
+				18D8C3B11C1AF9E800967B02 /* CYJumpToCollectionView.m in Sources */,
 				18DA89C91C14844200B4631D /* CYTabbar.m in Sources */,
 				189A34C81C19157600E09B86 /* CYEncourageMeController.m in Sources */,
 			);
@@ -1041,7 +1186,9 @@
 		};
 		18DA89731C13D44400B4631D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9098E73B1BB11059AF68843 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (76V5688MH4)";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";
@@ -1054,7 +1201,9 @@
 		};
 		18DA89741C13D44400B4631D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB753EE1F56EF8BC924E4D1C /* Pods.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (76V5688MH4)";
 				GCC_PREFIX_HEADER = "驾考刷题/PrefixHeader.pch";

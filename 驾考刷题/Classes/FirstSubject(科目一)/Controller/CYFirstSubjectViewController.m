@@ -11,6 +11,7 @@
 #import "MMDrawerBarButtonItem.h"
 #import "CYLeftDrawerController.h"
 #import "CYSettingViewController.h"
+#import "CYQuestionViewController.h"
 @interface CYFirstSubjectViewController ()<UIScrollViewDelegate>
 
 //滚动图片3个
@@ -29,8 +30,13 @@
     [super viewDidLoad];
     //设置左边抽屉
     [self setupLeftMenuButton];
+    //设置右边设置
+    [self setRightBarButton];
     //设置滚动图片
     [self setSCrollImage];
+
+
+
 
 }
 /**
@@ -57,7 +63,8 @@
     //设置uiscrollView的contentsize
     CGFloat maxW = self.scrollView.frame.size.width * 5;
     self.scrollView.contentSize = CGSizeMake(maxW, 0);
-
+    //设置代理
+    self.scrollView.delegate = self;
     //实现uiscrollView的分页效果
     self.scrollView.pagingEnabled = YES;
 
@@ -84,13 +91,19 @@
     //为navigationItem添加LeftBarButtonItem
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
 
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(setting) image:@"Home_setting" highImage:nil];
 }
 -(void)leftDrawerButtonPress:(id)sender
 {
     //开关左抽屉
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 
+}
+
+
+#pragma mark - 设置右边设置
+-(void)setRightBarButton
+{
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(setting) image:@"Home_setting" highImage:nil];
 }
 /** 设置 */
 - (void)setting {
@@ -99,7 +112,6 @@
 
     [self.navigationController pushViewController:settingVc animated:YES];
 }
-
 
 #pragma mark - 滚动图片相关
 /**
@@ -150,6 +162,22 @@
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     //改变优先级
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+#pragma mark - 做题按钮事件
+- (IBAction)orderTraing:(id)sender {
+    CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
+    [self.navigationController pushViewController:questionVc animated:YES];
+}
+
+- (IBAction)randTraing:(id)sender {
+}
+
+- (IBAction)myWrong:(id)sender {
+    
+}
+
+- (IBAction)myCollect:(id)sender {
 }
 
 @end

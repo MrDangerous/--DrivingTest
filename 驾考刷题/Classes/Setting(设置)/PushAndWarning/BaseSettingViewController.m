@@ -69,7 +69,7 @@
     return cell;
 }
 #pragma mark - cell的点中
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //获取模型里的vcClass[控制器类型]
     //获取组的数据模型

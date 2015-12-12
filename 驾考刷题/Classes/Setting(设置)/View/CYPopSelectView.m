@@ -36,6 +36,7 @@
     }
     return self;
 }
+
 -(NSArray *)cellData
 {
     if (!_cellData) {
@@ -55,6 +56,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
+    //设置cell字体
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     //设置数据

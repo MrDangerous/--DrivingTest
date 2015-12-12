@@ -31,6 +31,7 @@
 {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = YES;
     [self.tableView reloadData];
 }
@@ -40,7 +41,7 @@
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
     //去除状态栏
-    [self prefersStatusBarHidden];
+//    self.prefersStatusBarHidden = YES;
 
     //设置数据
 
@@ -56,6 +57,11 @@
     [self.cellData addObject:group1];
 
 }
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 #pragma mark - 加载数据
 #pragma mark - 组的个数
 
@@ -84,11 +90,21 @@
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.font = [UIFont systemFontOfSize:16];
 
+    [cell addSubview:[self addDivideView]];
+
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 54;
+}
+
+/** 添加分割线 */
+- (UIView *)addDivideView {
+    UIView *divide = [[UIView alloc] init];
+    divide.frame = CGRectMake(0, 53, self.tableView.width, 1);
+    divide.backgroundColor = [UIColor blackColor];
+    return divide;
 }
 
 @end
