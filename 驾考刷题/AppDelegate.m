@@ -11,6 +11,7 @@
 #import "CYNavigationViewController.h"
 #import "CYLeftDrawerController.h"
 #import "MMDrawerController.h"
+#import "SDWebImageManager.h"
 @interface AppDelegate ()
 
 @end
@@ -69,5 +70,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
 }
+/**
+ *  解决SDWebImage越堆越多
+ */
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
 
+    SDWebImageManager *mgr = [SDWebImageManager sharedManager];
+    //1.取消下载
+    [mgr cancelAll];
+    //2.清除内存中的所有图片
+    [mgr.imageCache clearMemory];
+
+}
 @end

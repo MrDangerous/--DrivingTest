@@ -21,6 +21,11 @@
 #define CYLog(...)
 #endif
 
+
+/** 获取屏幕高宽 **/
+#define __kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define __kScreenWidth [UIScreen mainScreen].bounds.size.width
+
 // RGB颜色
 #define CYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
