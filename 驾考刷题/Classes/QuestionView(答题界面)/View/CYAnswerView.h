@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIView *optionD;
 
 @property (weak, nonatomic) IBOutlet UIView *lineBC;
+@property (weak, nonatomic) IBOutlet UIView *lineDX;
 @property (weak, nonatomic) IBOutlet UIView *lineCD;
 @end

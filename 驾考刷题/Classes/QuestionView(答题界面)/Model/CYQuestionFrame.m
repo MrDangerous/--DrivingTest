@@ -22,21 +22,22 @@
     self.titleLabelF = (CGRect){{0, 0}, titleSize};
 
     /** 图片 */
+    CGFloat answerY = 0;
     if (questionMode.url == nil || [questionMode.url isEqualToString:@""]) {
-             self.questionImageF = CGRectMake(0, -1, 0, 0);
+        answerY = CGRectGetMaxY(self.titleLabelF) + QuestionCellBorderW;
     } else {
         CGFloat imageX = QuestionCellBorderW;
         CGFloat imageY = CGRectGetMaxY(self.titleLabelF) + QuestionCellBorderW;
         CGFloat imageW = __kScreenWidth - 2 * QuestionCellBorderW;
         CGFloat imageH = 150;
         self.questionImageF = CGRectMake(imageX, imageY, imageW, imageH);
+        answerY = CGRectGetMaxY(self.questionImageF) + QuestionCellBorderW;
     }
 
     /** 选项 */
-        CGFloat answerX = QuestionCellBorderW;
-        CGFloat answerY =  MAX(CGRectGetMaxY(self.titleLabelF), CGRectGetMaxY(self.questionImageF)) + QuestionCellBorderW;
-        CGFloat answerW = __kScreenWidth - 2 * QuestionCellBorderW;
-        CGFloat answerH = 184;
+        CGFloat answerX = 0;
+        CGFloat answerW = __kScreenWidth;
+        CGFloat answerH = 185;
         self.answerViewF = CGRectMake(answerX, answerY, answerW, answerH);
 
 

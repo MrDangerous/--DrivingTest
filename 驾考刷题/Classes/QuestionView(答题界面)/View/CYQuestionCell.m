@@ -80,20 +80,24 @@
 
     if (questionMode.item3  == nil|| [questionMode.item3 isEqualToString:@""]) {
         self.answerView.optionC.hidden = YES;
-        self.answerView.lineBC.hidden = YES;
         self.answerView.lineCD.hidden = YES;
+        self.answerView.lineDX.hidden = YES;
     } else {
         self.answerView.optionC.hidden = NO;
+        self.answerView.lineCD.hidden = NO;
+        self.answerView.lineDX.hidden = NO;
         self.answerView.labelC.text = questionMode.item3;
 
     }
 
     if (questionMode.item4 == nil || [questionMode.item4 isEqualToString:@""]) {
         self.answerView.optionD.hidden = YES;
-        self.answerView.lineBC.hidden = YES;
         self.answerView.lineCD.hidden = YES;
+        self.answerView.lineDX.hidden = YES;
     } else {
         self.answerView.optionD.hidden = NO;
+        self.answerView.lineCD.hidden = NO;
+        self.answerView.lineDX.hidden = NO;
         self.answerView.labelD.text = questionMode.item4;
     }
 

@@ -9,6 +9,13 @@
 #import "CYQuestionModel.h"
 #import "MJExtension.h"
 @implementation CYQuestionModel
+/**
+ *  给题目加题号
+ */
+-(void)setQuestion:(NSString *)question
+{
+    _question =[NSString stringWithFormat:@"%ld.%@",(long)self.id,question];
 
+}
 
 @end

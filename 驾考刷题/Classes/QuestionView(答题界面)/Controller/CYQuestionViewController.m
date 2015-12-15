@@ -187,6 +187,7 @@ static NSString *const ID = @"cell";
     //3.发送请求
     [mgr GET:@"http://api2.juheapi.com/jztk/query" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
        //将微博字典数组转为微博模型数组
+        [responseObject writeToFile:@"/Users/apple/Desktop/question.plist" atomically:YES];
         NSArray *newQuestions = [CYQuestionModel objectArrayWithKeyValuesArray:responseObject[@"result"]];
         NSMutableArray *newFrames = [NSMutableArray array];
         for (CYQuestionModel *model in newQuestions) {
