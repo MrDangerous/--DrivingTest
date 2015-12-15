@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "CYQuestionModel.h"
 @interface CYSaveQuestionModelTool : NSObject
-/**
- *  存储题目信息
- *
- *  @param questionModel 题目模型
- */
-+(void)saveQuestionModel:(CYQuestionModel *)questionModel;
-/**
- *  返回题目信息
- *
- *  @return 题目模型
- */
-+(CYQuestionModel *)questionModel;
+///**
+// *  存储题目信息
+// *
+// *  @param questionModel 题目模型
+// */
+//+(void)saveQuestionModel:(CYQuestionModel *)questionModel;
+///**
+// *  返回题目信息
+// *
+// *  @return 题目模型
+// */
+//+(CYQuestionModel *)questionModel;
 @end

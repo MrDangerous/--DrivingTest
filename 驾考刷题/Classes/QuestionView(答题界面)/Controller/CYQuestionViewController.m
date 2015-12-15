@@ -13,7 +13,8 @@
 #import "CYQuestionCell.h"
 #import "CYQuestionModel.h"
 #import "AFNetworking.h"
-
+#import "MJExtension.h"
+#import "CYQuestionFrame.h"
 @interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic, weak)UICollectionView *collectionView;
 /** naviBar相关 */
@@ -28,25 +29,25 @@
 @property (nonatomic, strong) UIButton *topCover;
 
 /**
- *  题目数组（里面放的都是字典，一个字典就代表一道题目）
+ *  题目数组（里面放的都是CYQuestion数组，一个数组就代表一道题目）
  */
-@property (nonatomic, strong) NSMutableArray *questions;
+@property (nonatomic, strong) NSMutableArray *questionFrames;
 @end
 
 @implementation CYQuestionViewController
-/**
- *  懒加载数据
- */
--(NSMutableArray *)questions
+///**
+// *  懒加载数据
+// */
+-(NSMutableArray *)questionFrames
 {
-    if (!_questions) {
-        self.questions = [[NSMutableArray alloc]init];
+    if (!_questionFrames) {
+        self.questionFrames = [[NSMutableArray alloc]init];
         }
-    return _questions;
+    return _questionFrames;
 }
 
 
-static NSString *const ID = @"CYQuestionCell";
+static NSString *const ID = @"cell";
 -(void)configCollectionView
 {
 
@@ -61,32 +62,29 @@ static NSString *const ID = @"CYQuestionCell";
     collectionView.bounces = NO;
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    [collectionView registerNib:[UINib nibWithNibName:@"CYQuestionCell" bundle:nil] forCellWithReuseIdentifier:ID];
+    //注册cell
+    [collectionView registerClass:[CYQuestionCell class] forCellWithReuseIdentifier:ID];
     collectionView.pagingEnabled = YES;
     collectionView.showsHorizontalScrollIndicator = NO;
-    collectionView.backgroundColor = [UIColor blueColor];
+    collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:collectionView];
 }
 
 #pragma mark collectionView数据源代理
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.questions.count;
+    return self.questionFrames.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CYQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-   // 取出这行对应的题目字典
-    CYQuestionModel *question = self.questions[indexPath.item];
-    cell.A.text = question.item1;
-
+//    取出这行对应的数据模型
+    cell.questionFrame = self.questionFrames[indexPath.item];
     return cell;
 
 }
-
-
 
 
 - (void)viewDidLoad {
@@ -188,13 +186,15 @@ static NSString *const ID = @"CYQuestionCell";
     params[@"testType"] = @"rand";
     //3.发送请求
     [mgr GET:@"http://api2.juheapi.com/jztk/query" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //取得 题目字典 数组
-        NSArray *dictArray = responseObject[@"result"];
-        //将微博字典数组转为微博模型数组
-        for (NSDictionary *dict in dictArray) {
-            CYQuestionModel *questionMode = [CYQuestionModel questionModelWithDict:dict];
-            [self.questions addObject:questionMode];
+       //将微博字典数组转为微博模型数组
+        NSArray *newQuestions = [CYQuestionModel objectArrayWithKeyValuesArray:responseObject[@"result"]];
+        NSMutableArray *newFrames = [NSMutableArray array];
+        for (CYQuestionModel *model in newQuestions) {
+            CYQuestionFrame *f = [[CYQuestionFrame alloc]init];
+            f.questionMode = model;
+            [newFrames addObject:f];
         }
+        self.questionFrames = newFrames;
         //刷新表格
         [self.collectionView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -202,14 +202,7 @@ static NSString *const ID = @"CYQuestionCell";
     }];
 }
 #pragma mark - 添加3个按钮事件
-/**
- *  查看答题情况，跳转到其他题
- */
--(void)jump:(UIButton *)jumpItem
-{
-//    [self.j]
 
-}
 
 
 

@@ -7,13 +7,8 @@
 //
 
 #import "CYQuestionModel.h"
-
+#import "MJExtension.h"
 @implementation CYQuestionModel
-+(instancetype)questionModelWithDict:(NSDictionary *)dict
-{
-    CYQuestionModel *model = [[CYQuestionModel alloc]init];
-    [model setValuesForKeysWithDictionary:dict];
-    return model;
-}
+
 
 @end

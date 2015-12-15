@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1801EA941C1AA91300FA82EB /* CYQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1801EA921C1AA91300FA82EB /* CYQuestionViewController.m */; };
-		183F323B1C1C31D6003F6618 /* CYQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F32391C1C31D6003F6618 /* CYQuestionCell.m */; };
+		18052EE01C1EFA4100527ACC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18052EDF1C1EFA4100527ACC /* NSString+Extension.m */; };
 		183F323F1C1C34E2003F6618 /* CYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F323E1C1C34E2003F6618 /* CYButton.m */; };
 		1859AFDE1C19A4230037BF56 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859AFD01C19A4230037BF56 /* MBProgressHUD+MJ.m */; };
 		1859AFDF1C19A4230037BF56 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1859AFD11C19A4230037BF56 /* MBProgressHUD.bundle */; };
@@ -29,6 +29,10 @@
 		18D7871D1C16C09E00E40F34 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871C1C16C09E00E40F34 /* AboutMeViewController.m */; };
 		18D787201C16C26100E40F34 /* CYSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7871F1C16C26100E40F34 /* CYSettingGroup.m */; };
 		18D787231C16CA7200E40F34 /* BaseSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D787221C16CA7200E40F34 /* BaseSettingViewController.m */; };
+		18D85E8C1C1EAF2B00B011B3 /* CYQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D85E8B1C1EAF2B00B011B3 /* CYQuestionCell.m */; };
+		18D85E8F1C1EB7B800B011B3 /* CYAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D85E8E1C1EB7B800B011B3 /* CYAnswerView.m */; };
+		18D85E911C1EB7D800B011B3 /* CYAnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D85E901C1EB7D800B011B3 /* CYAnswerView.xib */; };
+		18D85E941C1EBDDC00B011B3 /* CYQuestionFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D85E931C1EBDDC00B011B3 /* CYQuestionFrame.m */; };
 		18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D87F001C181EFB003DC40A /* CYPopSelectView.m */; };
 		18D87F071C1823DD003DC40A /* CYSettingLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D87F061C1823DD003DC40A /* CYSettingLabelItem.m */; };
 		18D87F0B1C1850CE003DC40A /* CYPopSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D87F0A1C1850CE003DC40A /* CYPopSelectView.xib */; };
@@ -101,7 +105,6 @@
 		18F637B91C1D30A40098F30C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637AF1C1D30A40098F30C /* AFURLResponseSerialization.m */; };
 		18F637BA1C1D30A40098F30C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637B11C1D30A40098F30C /* AFURLSessionManager.m */; };
 		18F637BC1C1D3B360098F30C /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637BB1C1D3B360098F30C /* Foundation+Log.m */; };
-		18F637CC1C1D6E290098F30C /* CYQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F637CB1C1D6E290098F30C /* CYQuestionCell.xib */; };
 		18FD4F281C170A0500D01D96 /* CYProductShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */; };
 		18FD4F521C170F4900D01D96 /* CYProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4F511C170F4900D01D96 /* CYProduct.m */; };
 		18FD4FD81C17151400D01D96 /* CYProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD4FD61C17151400D01D96 /* CYProductCell.m */; };
@@ -129,8 +132,8 @@
 /* Begin PBXFileReference section */
 		1801EA911C1AA91300FA82EB /* CYQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYQuestionViewController.h; sourceTree = "<group>"; };
 		1801EA921C1AA91300FA82EB /* CYQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYQuestionViewController.m; sourceTree = "<group>"; };
-		183F32381C1C31D6003F6618 /* CYQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYQuestionCell.h; sourceTree = "<group>"; };
-		183F32391C1C31D6003F6618 /* CYQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYQuestionCell.m; sourceTree = "<group>"; };
+		18052EDE1C1EFA4100527ACC /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		18052EDF1C1EFA4100527ACC /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		183F323D1C1C34E2003F6618 /* CYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYButton.h; sourceTree = "<group>"; };
 		183F323E1C1C34E2003F6618 /* CYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYButton.m; sourceTree = "<group>"; };
 		1859AFCF1C19A4230037BF56 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
@@ -169,6 +172,13 @@
 		18D7871F1C16C26100E40F34 /* CYSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSettingGroup.m; sourceTree = "<group>"; };
 		18D787211C16CA7200E40F34 /* BaseSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSettingViewController.h; path = ../PushAndWarning/BaseSettingViewController.h; sourceTree = "<group>"; };
 		18D787221C16CA7200E40F34 /* BaseSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseSettingViewController.m; path = ../PushAndWarning/BaseSettingViewController.m; sourceTree = "<group>"; };
+		18D85E8A1C1EAF2B00B011B3 /* CYQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYQuestionCell.h; sourceTree = "<group>"; };
+		18D85E8B1C1EAF2B00B011B3 /* CYQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYQuestionCell.m; sourceTree = "<group>"; };
+		18D85E8D1C1EB7B800B011B3 /* CYAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYAnswerView.h; sourceTree = "<group>"; };
+		18D85E8E1C1EB7B800B011B3 /* CYAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYAnswerView.m; sourceTree = "<group>"; };
+		18D85E901C1EB7D800B011B3 /* CYAnswerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYAnswerView.xib; sourceTree = "<group>"; };
+		18D85E921C1EBDDC00B011B3 /* CYQuestionFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYQuestionFrame.h; sourceTree = "<group>"; };
+		18D85E931C1EBDDC00B011B3 /* CYQuestionFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYQuestionFrame.m; sourceTree = "<group>"; };
 		18D87EFF1C181EFB003DC40A /* CYPopSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPopSelectView.h; sourceTree = "<group>"; };
 		18D87F001C181EFB003DC40A /* CYPopSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPopSelectView.m; sourceTree = "<group>"; };
 		18D87F051C1823DD003DC40A /* CYSettingLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSettingLabelItem.h; sourceTree = "<group>"; };
@@ -292,7 +302,6 @@
 		18F637B01C1D30A40098F30C /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		18F637B11C1D30A40098F30C /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		18F637BB1C1D3B360098F30C /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
-		18F637CB1C1D6E290098F30C /* CYQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYQuestionCell.xib; sourceTree = "<group>"; };
 		18FD4F261C170A0500D01D96 /* CYProductShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProductShareViewController.h; sourceTree = "<group>"; };
 		18FD4F271C170A0500D01D96 /* CYProductShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYProductShareViewController.m; sourceTree = "<group>"; };
 		18FD4F501C170F4900D01D96 /* CYProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYProduct.h; sourceTree = "<group>"; };
@@ -356,6 +365,8 @@
 			children = (
 				18C74CBB1C1C5B1B0080290C /* CYQuestionModel.h */,
 				18C74CBC1C1C5B1B0080290C /* CYQuestionModel.m */,
+				18D85E921C1EBDDC00B011B3 /* CYQuestionFrame.h */,
+				18D85E931C1EBDDC00B011B3 /* CYQuestionFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,9 +391,11 @@
 				18D8C3AF1C1AF9E800967B02 /* CYJumpToCollectionView.h */,
 				18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */,
 				1892A0781C1AC02A00BE889B /* CYJumpToCollectionView.xib */,
-				183F32381C1C31D6003F6618 /* CYQuestionCell.h */,
-				183F32391C1C31D6003F6618 /* CYQuestionCell.m */,
-				18F637CB1C1D6E290098F30C /* CYQuestionCell.xib */,
+				18D85E8A1C1EAF2B00B011B3 /* CYQuestionCell.h */,
+				18D85E8B1C1EAF2B00B011B3 /* CYQuestionCell.m */,
+				18D85E8D1C1EB7B800B011B3 /* CYAnswerView.h */,
+				18D85E8E1C1EB7B800B011B3 /* CYAnswerView.m */,
+				18D85E901C1EB7D800B011B3 /* CYAnswerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -756,6 +769,8 @@
 		18DA89881C14283F00B4631D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				18052EDE1C1EFA4100527ACC /* NSString+Extension.h */,
+				18052EDF1C1EFA4100527ACC /* NSString+Extension.m */,
 				18F637BB1C1D3B360098F30C /* Foundation+Log.m */,
 				18DA89C11C14798600B4631D /* UIBarButtonItem+Extension.h */,
 				18DA89C21C14798600B4631D /* UIBarButtonItem+Extension.m */,
@@ -1095,6 +1110,7 @@
 				189A34C91C19157600E09B86 /* CYEncourageMeController.xib in Resources */,
 				18D8C3AB1C1AEC6C00967B02 /* CYJumpCell.xib in Resources */,
 				18D8C1231C19B94A00402F6A /* reader@2x.png in Resources */,
+				18D85E911C1EB7D800B011B3 /* CYAnswerView.xib in Resources */,
 				18D8C1271C19B94A00402F6A /* youdaonote@2x.png in Resources */,
 				18DA89581C13D44400B4631D /* LaunchScreen.storyboard in Resources */,
 				18D8C1281C19B94A00402F6A /* products.json in Resources */,
@@ -1109,7 +1125,6 @@
 				1859AFDF1C19A4230037BF56 /* MBProgressHUD.bundle in Resources */,
 				18D8C1211C19B94A00402F6A /* newsapp@2x.png in Resources */,
 				18FD4FD91C17151400D01D96 /* CYProductCell.xib in Resources */,
-				18F637CC1C1D6E290098F30C /* CYQuestionCell.xib in Resources */,
 				18D8B5611C191EB000F87435 /* CYLeftDrawerController.xib in Resources */,
 				18D8C11B1C19B94A00402F6A /* fanfan@2x.png in Resources */,
 				18D8C1181C19B94A00402F6A /* apper@2x.png in Resources */,
@@ -1191,6 +1206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F6377A1C1D011A0098F30C /* UIButton+WebCache.m in Sources */,
+				18D85E8C1C1EAF2B00B011B3 /* CYQuestionCell.m in Sources */,
 				1859AFE41C19A4230037BF56 /* UIViewController+MMDrawerController.m in Sources */,
 				18D7870D1C16ADE900E40F34 /* CYSettingCell.m in Sources */,
 				18D8B5601C191EB000F87435 /* CYLeftDrawerController.m in Sources */,
@@ -1202,6 +1218,7 @@
 				18F637B71C1D30A40098F30C /* AFURLConnectionOperation.m in Sources */,
 				18D8C12E1C19C65300402F6A /* CYSecondSubjectController.m in Sources */,
 				18DA899F1C146CB700B4631D /* CYFirstSubjectViewController.m in Sources */,
+				18052EE01C1EFA4100527ACC /* NSString+Extension.m in Sources */,
 				1859AFE31C19A4230037BF56 /* MMDrawerVisualState.m in Sources */,
 				1859AFDE1C19A4230037BF56 /* MBProgressHUD+MJ.m in Sources */,
 				18D787011C16825000E40F34 /* CYSettingViewController.m in Sources */,
@@ -1231,8 +1248,8 @@
 				18D787041C16828400E40F34 /* CYSettingItem.m in Sources */,
 				1859AFE21C19A4230037BF56 /* MMDrawerController.m in Sources */,
 				183F323F1C1C34E2003F6618 /* CYButton.m in Sources */,
-				183F323B1C1C31D6003F6618 /* CYQuestionCell.m in Sources */,
 				18DA894A1C13D44400B4631D /* main.m in Sources */,
+				18D85E941C1EBDDC00B011B3 /* CYQuestionFrame.m in Sources */,
 				18F637801C1D011A0098F30C /* UIView+WebCacheOperation.m in Sources */,
 				18F637B41C1D30A40098F30C /* AFHTTPSessionManager.m in Sources */,
 				18F637891C1D125A0098F30C /* CYSaveQuestionModelTool.m in Sources */,
@@ -1251,6 +1268,7 @@
 				18F637B31C1D30A40098F30C /* AFHTTPRequestOperationManager.m in Sources */,
 				18F637771C1D011A0098F30C /* SDWebImageDownloaderOperation.m in Sources */,
 				18DA89BC1C14758D00B4631D /* CYForthSubjectViewController.m in Sources */,
+				18D85E8F1C1EB7B800B011B3 /* CYAnswerView.m in Sources */,
 				18D87F011C181EFB003DC40A /* CYPopSelectView.m in Sources */,
 				18F6377F1C1D011A0098F30C /* UIImageView+WebCache.m in Sources */,
 				18D8C3B11C1AF9E800967B02 /* CYJumpToCollectionView.m in Sources */,
@@ -1394,6 +1412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chengjunya.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -1409,6 +1428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chengjunya.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};

@@ -28,5 +28,5 @@
 /** 图片链接*/
 @property(nonatomic, copy)NSString *url;
 
-+(instancetype)questionModelWithDict:(NSDictionary *)dict;
+
 @end
