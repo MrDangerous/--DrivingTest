@@ -49,7 +49,7 @@
                                 <constraint firstAttribute="width" constant="30" id="bT8-g8-sxj"/>
                             </constraints>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <state key="normal" image="Answer_A_1"/>
+                            <state key="normal" backgroundImage="Answer_A_1"/>
                             <state key="selected" backgroundImage="Answer_corrcet">
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
@@ -91,7 +91,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="A2g-YT-Xw2"/>
                             </constraints>
-                            <state key="normal" image="Answer_B_1"/>
+                            <state key="normal" backgroundImage="Answer_B_1"/>
                             <state key="selected" backgroundImage="Answer_corrcet"/>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gri-Iv-bot">
@@ -133,7 +133,7 @@
                                 <constraint firstAttribute="width" constant="30" id="YdW-MT-r2P"/>
                             </constraints>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <state key="normal" image="Answer_C_1"/>
+                            <state key="normal" backgroundImage="Answer_C_1"/>
                             <state key="selected" backgroundImage="Answer_corrcet">
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
@@ -176,7 +176,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="sug-p8-Tcb"/>
                             </constraints>
-                            <state key="normal" image="Answer_D_1"/>
+                            <state key="normal" backgroundImage="Answer_D_1"/>
                             <state key="selected" backgroundImage="Answer_corrcet"/>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjP-Zn-IwA">

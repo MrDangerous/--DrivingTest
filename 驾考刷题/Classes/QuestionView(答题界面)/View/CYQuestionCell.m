@@ -31,32 +31,45 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        /** 滚动背景 */
-        UIScrollView *scrollView = [[UIScrollView alloc]init];
-//        scrollView.frame = [UIScreen mainScreen].bounds;
-        scrollView.scrollEnabled = YES;
-
-        [self.contentView addSubview:scrollView];
-        self.scrollView = scrollView;
-        /** 题干 */
-        UILabel *titleLabel = [[UILabel alloc]init];
-//        titleLabel.backgroundColor = [UIColor redColor];
-        titleLabel.numberOfLines = 0;
-        titleLabel.font = [UIFont systemFontOfSize:15];
-        [scrollView addSubview:titleLabel];
-        self.titleLabel = titleLabel;
-        /** 图片 */
-        UIImageView *questionImage = [[UIImageView alloc]init];
-//        questionImage.backgroundColor = [UIColor grayColor];
-        [scrollView addSubview:questionImage];
-        self.questionImage = questionImage;
-        /** 选项 */
-        CYAnswerView *answerView = [[CYAnswerView alloc]init];
-//        answerView.backgroundColor = [UIColor greenColor];
-        [scrollView addSubview:answerView];
-        self.answerView = answerView;
+        [self setup];
     }
     return self;
+}
+-(instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setup];
+    }
+    return self;
+}
+
+-(void)setup
+{
+    /** 滚动背景 */
+    UIScrollView *scrollView = [[UIScrollView alloc]init];
+    //        scrollView.frame = [UIScreen mainScreen].bounds;
+    scrollView.scrollEnabled = YES;
+
+    [self.contentView addSubview:scrollView];
+    self.scrollView = scrollView;
+    /** 题干 */
+    UILabel *titleLabel = [[UILabel alloc]init];
+    //        titleLabel.backgroundColor = [UIColor redColor];
+    titleLabel.numberOfLines = 0;
+    titleLabel.font = [UIFont systemFontOfSize:15];
+    [scrollView addSubview:titleLabel];
+    self.titleLabel = titleLabel;
+    /** 图片 */
+    UIImageView *questionImage = [[UIImageView alloc]init];
+    //        questionImage.backgroundColor = [UIColor grayColor];
+    [scrollView addSubview:questionImage];
+    self.questionImage = questionImage;
+    /** 选项 */
+    CYAnswerView *answerView = [[CYAnswerView alloc]init];
+    //        answerView.backgroundColor = [UIColor blueColor];
+    [scrollView addSubview:answerView];
+    self.answerView = answerView;
+
 }
 
 -(void)setQuestionFrame:(CYQuestionFrame *)questionFrame

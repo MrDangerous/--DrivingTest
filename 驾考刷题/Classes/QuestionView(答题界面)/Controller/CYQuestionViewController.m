@@ -15,7 +15,7 @@
 #import "AFNetworking.h"
 #import "MJExtension.h"
 #import "CYQuestionFrame.h"
-@interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,CYAnswerViewDelegate>
+@interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic, weak)UICollectionView *collectionView;
 /** naviBar相关 */
 /**需要强指针引用*/
@@ -32,6 +32,9 @@
  *  题目数组（里面放的都是CYQuestion数组，一个数组就代表一道题目）
  */
 @property (nonatomic, strong) NSMutableArray *questionFrames;
+
+// 控制题目索引, 类型的int类型属性, 默认没有赋值一开始就是0
+@property(nonatomic, assign)NSInteger index;
 @end
 
 @implementation CYQuestionViewController
@@ -82,9 +85,34 @@ static NSString *const ID = @"cell";
     CYQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
 //    取出这行对应的数据模型
     cell.questionFrame = self.questionFrames[indexPath.item];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(questionDidAnswerCorrect:) name:@"CYAnswerDidSelectCorrect" object:nil];
     return cell;
 
 }
+
+//回答正确之后的通知方法
+-(void)questionDidAnswerCorrect:(NSNotification *)notification
+{
+    self.index++;
+    if (self.index == self.questionFrames.count - 1) {
+        return;
+    }
+    CGPoint offset = self.collectionView.contentOffset;
+    offset.x += __kScreenWidth;
+    [self.collectionView reloadData];
+    [self.collectionView setContentOffset:offset animated:YES];
+
+}
+
+
+
+
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    // 从这里拿到的下标才是最准确的
+//    CGPoint offSet = scrollView.contentOffset;
+//    self.index = offSet.x / __kScreenWidth;
+//}
 
 
 - (void)viewDidLoad {
@@ -207,20 +235,20 @@ static NSString *const ID = @"cell";
 
 
 #pragma mark - CYAnswerView的代理
--(void)CYAnswerViewDidAnswerCorrectly:(CYAnswerView *)CYAnswerView
-{
-    CGPoint offset = self.collectionView.contentOffset;
-    offset.x += __kScreenWidth;
-//    [self.collectionView reloadData];
-    [self.collectionView setContentOffset:offset animated:YES];
-
-}
-
--(void)CYAnswerViewDidAnswerWrong:(CYAnswerView *)CYAnswerView
-{
-
-
-
-}
+//-(void)CYAnswerViewDidAnswerCorrectly:(CYAnswerView *)CYAnswerView
+//{
+//    CGPoint offset = self.collectionView.contentOffset;
+//    offset.x += __kScreenWidth;
+////    [self.collectionView reloadData];
+//    [self.collectionView setContentOffset:offset animated:YES];
+//
+//}
+//
+//-(void)CYAnswerViewDidAnswerWrong:(CYAnswerView *)CYAnswerView
+//{
+//
+//
+//
+//}
 
 @end
