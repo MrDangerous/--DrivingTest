@@ -83,6 +83,7 @@
 		18DBD9F71C1FE81C00A66359 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9EF1C1FE81C00A66359 /* FMDatabasePool.m */; };
 		18DBD9F81C1FE81C00A66359 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9F11C1FE81C00A66359 /* FMDatabaseQueue.m */; };
 		18DBD9F91C1FE81C00A66359 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9F41C1FE81C00A66359 /* FMResultSet.m */; };
+		18DBD9FB1C1FEACB00A66359 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DBD9FA1C1FEACB00A66359 /* libsqlite3.0.tbd */; };
 		18F637711C1D011A0098F30C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637511C1D011A0098F30C /* MKAnnotationView+WebCache.m */; };
 		18F637721C1D011A0098F30C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637531C1D011A0098F30C /* NSData+ImageContentType.m */; };
 		18F637731C1D011A0098F30C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F637551C1D011A0098F30C /* SDImageCache.m */; };
@@ -263,6 +264,7 @@
 		18DBD9F21C1FE81C00A66359 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		18DBD9F31C1FE81C00A66359 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		18DBD9F41C1FE81C00A66359 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		18DBD9FA1C1FEACB00A66359 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		18F637501C1D011A0098F30C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		18F637511C1D011A0098F30C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		18F637521C1D011A0098F30C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DBD9FB1C1FEACB00A66359 /* libsqlite3.0.tbd in Frameworks */,
 				FC6BA1D3812CCBE8BE05FC36 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,6 +1016,7 @@
 		83DACD4132D39FA22255510D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18DBD9FA1C1FEACB00A66359 /* libsqlite3.0.tbd */,
 				9D56638B8F0386810C71CB4A /* libPods.a */,
 			);
 			name = Frameworks;

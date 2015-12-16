@@ -70,39 +70,15 @@
     self.titleLabel.frame = questionFrame.titleLabelF;
     self.titleLabel.text = questionMode.question;
 
+
     /** 图片 */
     self.questionImage.frame = questionFrame.questionImageF;
     [self.questionImage sd_setImageWithURL:[NSURL URLWithString:questionMode.url] placeholderImage:nil];
     /** 选项 */
     self.answerView.frame = questionFrame.answerViewF;
-    self.answerView.labelA.text = questionMode.item1;
-    self.answerView.labelB.text = questionMode.item2;
+    self.answerView.questionMode = questionMode;
 
-    if (questionMode.item3  == nil|| [questionMode.item3 isEqualToString:@""]) {
-        self.answerView.optionC.hidden = YES;
-        self.answerView.lineCD.hidden = YES;
-        self.answerView.lineDX.hidden = YES;
-    } else {
-        self.answerView.optionC.hidden = NO;
-        self.answerView.lineCD.hidden = NO;
-        self.answerView.lineDX.hidden = NO;
-        self.answerView.labelC.text = questionMode.item3;
-
-    }
-
-    if (questionMode.item4 == nil || [questionMode.item4 isEqualToString:@""]) {
-        self.answerView.optionD.hidden = YES;
-        self.answerView.lineCD.hidden = YES;
-        self.answerView.lineDX.hidden = YES;
-    } else {
-        self.answerView.optionD.hidden = NO;
-        self.answerView.lineCD.hidden = NO;
-        self.answerView.lineDX.hidden = NO;
-        self.answerView.labelD.text = questionMode.item4;
-    }
-
-
-
+    CYLog(@"CYQuestionCell--------------%@",questionMode.answer);
 }
 
 @end

@@ -7,28 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CYQuestionModel;
+@class CYAnswerView;
+@protocol  CYAnswerViewDelegate <NSObject>
+
+-(void)CYAnswerViewDidAnswerCorrectly:(CYAnswerView *)CYAnswerView;
+@optional
+-(void)CYAnswerViewDidAnswerWrong:(CYAnswerView *)CYAnswerView;
+
+@end
+
 
 @interface CYAnswerView : UIView
-@property (weak, nonatomic) IBOutlet UILabel *labelA;
-@property (weak, nonatomic) IBOutlet UIButton *buttonA;
-@property (weak, nonatomic) IBOutlet UIButton *btnA;
+@property(nonatomic, strong)CYQuestionModel *questionMode;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonB;
-@property (weak, nonatomic) IBOutlet UIButton *btnB;
-@property (weak, nonatomic) IBOutlet UILabel *labelB;
+@property(nonatomic, weak)id<CYAnswerViewDelegate> delegate;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonC;
-@property (weak, nonatomic) IBOutlet UILabel *labelC;
-@property (weak, nonatomic) IBOutlet UIButton *btnC;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonD;
-@property (weak, nonatomic) IBOutlet UILabel *labelD;
-@property (weak, nonatomic) IBOutlet UIButton *btnD;
-
-@property (weak, nonatomic) IBOutlet UIView *optionC;
-@property (weak, nonatomic) IBOutlet UIView *optionD;
-
-@property (weak, nonatomic) IBOutlet UIView *lineBC;
-@property (weak, nonatomic) IBOutlet UIView *lineDX;
-@property (weak, nonatomic) IBOutlet UIView *lineCD;
 @end

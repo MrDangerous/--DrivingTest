@@ -15,7 +15,7 @@
 #import "AFNetworking.h"
 #import "MJExtension.h"
 #import "CYQuestionFrame.h"
-@interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,CYAnswerViewDelegate>
 @property(nonatomic, weak)UICollectionView *collectionView;
 /** naviBar相关 */
 /**需要强指针引用*/
@@ -187,7 +187,7 @@ static NSString *const ID = @"cell";
     //3.发送请求
     [mgr GET:@"http://api2.juheapi.com/jztk/query" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
        //将微博字典数组转为微博模型数组
-        [responseObject writeToFile:@"/Users/apple/Desktop/question.plist" atomically:YES];
+        CYLog(@"%@",responseObject);
         NSArray *newQuestions = [CYQuestionModel objectArrayWithKeyValuesArray:responseObject[@"result"]];
         NSMutableArray *newFrames = [NSMutableArray array];
         for (CYQuestionModel *model in newQuestions) {
@@ -206,6 +206,21 @@ static NSString *const ID = @"cell";
 
 
 
+#pragma mark - CYAnswerView的代理
+-(void)CYAnswerViewDidAnswerCorrectly:(CYAnswerView *)CYAnswerView
+{
+    CGPoint offset = self.collectionView.contentOffset;
+    offset.x += __kScreenWidth;
+//    [self.collectionView reloadData];
+    [self.collectionView setContentOffset:offset animated:YES];
 
+}
+
+-(void)CYAnswerViewDidAnswerWrong:(CYAnswerView *)CYAnswerView
+{
+
+
+
+}
 
 @end
