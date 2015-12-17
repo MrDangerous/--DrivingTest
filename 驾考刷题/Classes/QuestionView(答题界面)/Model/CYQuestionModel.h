@@ -10,7 +10,7 @@
 
 @interface CYQuestionModel : NSObject
 /** 题目号*/
-@property(nonatomic, assign)NSInteger id;
+@property(nonatomic, assign,getter=idstr)NSInteger id;
 /** 题干*/
 @property(nonatomic, copy)NSString *question;
 /** 选项数*/
@@ -28,5 +28,9 @@
 /** 图片链接*/
 @property(nonatomic, copy)NSString *url;
 
+/** 是否被收藏 */
+@property (nonatomic, assign) BOOL isCollection;
 
+
++ (instancetype)modelWithDict:(NSDictionary *)dict;
 @end

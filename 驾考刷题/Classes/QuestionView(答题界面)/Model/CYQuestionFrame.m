@@ -9,6 +9,7 @@
 #import "CYQuestionFrame.h"
 #import "CYQuestionModel.h"
 #import "NSString+Extension.h"
+#import "MJExtension.h"
 #define QuestionCellBorderW 10
 
 @implementation CYQuestionFrame
@@ -45,6 +46,8 @@
     CGFloat scrollW = __kScreenWidth;
     CGFloat scrollH = CGRectGetMaxY(self.answerViewF);
     self.scrollViewF = CGRectMake(0, 0, scrollW, scrollH);
-
 }
+
+//MJ的解档和归档
+MJCodingImplementation
 @end

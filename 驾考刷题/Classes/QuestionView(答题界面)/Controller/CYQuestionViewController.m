@@ -12,49 +12,113 @@
 #import "CYButton.h"
 #import "CYQuestionCell.h"
 #import "CYQuestionModel.h"
-#import "AFNetworking.h"
-#import "MJExtension.h"
 #import "CYQuestionFrame.h"
+#import "CYSaveQuestionModelTool.h"
 @interface CYQuestionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic, weak)UICollectionView *collectionView;
 /** naviBar相关 */
-/**需要强指针引用*/
-@property (nonatomic, strong) UIButton *collectionBtn;
-@property (nonatomic, strong) UIButton *jumpBtn;
-@property (nonatomic, strong) UIButton *modeBtn;
+/** 拿到这三个按钮，以后要改变他们的按钮状态*/
+@property (nonatomic, weak) CYButton *collectionBtn;
+@property (nonatomic, weak) CYButton *jumpBtn;
+@property (nonatomic, weak) CYButton *modeBtn;
 
-// 弹出来的三个View
-@property (nonatomic, strong) UICollectionView *jumpCollectionView;
-@property (nonatomic, strong) CYJumpToCollectionView *jumpTopView;
-@property (nonatomic, strong) UIButton *topCover;
+// 弹出来的两个个View,一起就是一个大的弹出View，这两个可以封装在View中，减少控制器的代码量
+@property (nonatomic, weak) UICollectionView *jumpCollectionView;
+@property (nonatomic, weak) CYJumpToCollectionView *jumpTopView;
 
-/**
- *  题目数组（里面放的都是CYQuestion数组，一个数组就代表一道题目）
- */
-@property (nonatomic, strong) NSMutableArray *questionFrames;
+/** 弹出view时需要在背后加一个阴影按钮 */
+
+@property (nonatomic, weak) UIButton *topCover;
+
+/** 是否正在显示 跳转View */
+@property (nonatomic, assign) BOOL isShowingJumpView;
+
+
 
 // 控制题目索引, 类型的int类型属性, 默认没有赋值一开始就是0
-@property(nonatomic, assign)NSInteger index;
+@property(nonatomic, strong)NSIndexPath *indexPath;
+
+
 @end
 
 @implementation CYQuestionViewController
-///**
-// *  懒加载数据
-// */
--(NSMutableArray *)questionFrames
+
+#pragma mark - 数据的懒加载
+/**
+ *  创建弹出框阴影背景
+ */
+-(UIButton *)topCover
 {
-    if (!_questionFrames) {
-        self.questionFrames = [[NSMutableArray alloc]init];
-        }
-    return _questionFrames;
+    if (_topCover == nil) {
+        UIButton *topCover = [[UIButton alloc]init];
+        topCover.alpha = 0.4;
+        topCover.frame = CGRectMake(0, __kScreenHeight, __kScreenWidth, 64);
+        topCover.backgroundColor = [UIColor darkGrayColor];
+        [topCover addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
+        [self.navigationController.view addSubview:topCover];
+        _topCover = topCover;
+    }
+    return _topCover;
+}
+/**
+ *  选择菜单中小的collectionView
+ */
+-(UICollectionView *)jumpCollectionView
+{
+    if (_jumpCollectionView == nil) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        layout.itemSize =CGSizeMake((__kScreenWidth - 20) / 6 , (__kScreenWidth - 20) / 6);
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
+        UICollectionView *jumpCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64 + 70 + __kScreenHeight, __kScreenWidth, __kScreenHeight - 64 - 70) collectionViewLayout:layout];
+        jumpCollectionView.delegate = self;
+        jumpCollectionView.dataSource = self;
+        jumpCollectionView.backgroundColor = [UIColor whiteColor];
+        jumpCollectionView.scrollEnabled = YES;
+        jumpCollectionView.showsVerticalScrollIndicator = YES;
+        jumpCollectionView.contentSize = CGSizeMake(0, (self.questionFrames.count / 6 + 2) * (__kScreenWidth/6));
+        [jumpCollectionView registerNib:[UINib nibWithNibName:@"CYJumpCell" bundle:nil] forCellWithReuseIdentifier:@"CYJumpCell"];
+        [self.navigationController.view addSubview:jumpCollectionView];
+        _jumpCollectionView = jumpCollectionView;
+    }
+    return _jumpCollectionView;
+}
+/**
+ *  xib加载的弹出View
+ */
+-(CYJumpToCollectionView *)jumpTopView
+{
+    if (_jumpTopView == nil) {
+        CYJumpToCollectionView *jumpTopView = [[CYJumpToCollectionView alloc]init];
+        jumpTopView.frame = CGRectMake(0, __kScreenHeight + 64, __kScreenWidth, 70);
+        //添加手势，当一触摸到它时就跳转到主控制器
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jump)];
+        [jumpTopView addGestureRecognizer:tap];
+        [self.navigationController.view addSubview:jumpTopView];
+        _jumpTopView = jumpTopView;
+    }
+    return _jumpTopView;
 }
 
+#pragma mark - 系统方法
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
+
+    [self configCollectionView];
+
+    //刷新表格
+    [self.collectionView reloadData];
+    //配置导航栏
+    [self configNaviBar];
+
+}
+
+//主界面的大的collectionView
 static NSString *const ID = @"cell";
 -(void)configCollectionView
 {
-
-
     UICollectionViewFlowLayout *layout =[[UICollectionViewFlowLayout alloc]init];
     layout.itemSize = CGSizeMake(__kScreenWidth, __kScreenHeight - 64);
     layout.minimumInteritemSpacing = 0;
@@ -73,71 +137,83 @@ static NSString *const ID = @"cell";
     [self.view addSubview:collectionView];
 }
 
+
+
 #pragma mark collectionView数据源代理
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.questionFrames.count;
 }
 
-
+/**
+ *  在这里分别判断返回的cell是jumpCollectionView的还是collectionView的
+ */
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CYQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-//    取出这行对应的数据模型
-    cell.questionFrame = self.questionFrames[indexPath.item];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(questionDidAnswerCorrect:) name:@"CYAnswerDidSelectCorrect" object:nil];
-    return cell;
+    if (collectionView == self.collectionView) {
+        CYQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+        //取出这行对应的数据模型
+        cell.questionFrame = self.questionFrames[indexPath.item];
+        self.indexPath = indexPath;
+        //回答正确之后的通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(questionDidAnswerCorrect:) name:@"CYAnswerDidSelectCorrect" object:nil];
+
+        return cell;
+    }else{
+        CYJumpCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CYJumpCell" forIndexPath:indexPath];
+        [cell.btn setTitle:[NSString stringWithFormat:@"%zd",(indexPath.item + 1)] forState:UIControlStateNormal];
+
+        return cell;
+    }
+}
+/**
+ *  点击jumpToCollectionView的cell后跳转到相应的题目
+ */
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (collectionView == self.jumpCollectionView) {
+        //执行跳转
+        CGPoint offSet = self.collectionView.contentOffset;
+        offSet.x = __kScreenWidth * indexPath.item;
+        [self.collectionView setContentOffset:offSet animated:YES];
+        [self jump];
+    }
 
 }
 
-//回答正确之后的通知方法
+/**
+ *  回答正确之后的方法
+ */
 -(void)questionDidAnswerCorrect:(NSNotification *)notification
 {
-    self.index++;
-    if (self.index == self.questionFrames.count - 1) {
+    //如果是最后一题就返回，不执行下面的语句
+    if (self.indexPath.item == self.questionFrames.count - 1) {
         return;
     }
     CGPoint offset = self.collectionView.contentOffset;
     offset.x += __kScreenWidth;
     [self.collectionView reloadData];
     [self.collectionView setContentOffset:offset animated:YES];
+   }
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // 从这里拿到的下标才是最准确的
+    NSLog(@"contentOffset=(%f, %f)", self.collectionView.contentOffset.x, self.collectionView.contentOffset.y);
+
 
 }
-
-
-
-
-
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    // 从这里拿到的下标才是最准确的
-//    CGPoint offSet = scrollView.contentOffset;
-//    self.index = offSet.x / __kScreenWidth;
-//}
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self configCollectionView];
-    //配置导航栏
-    [self configNaviBar];
-    [self configQuestionInfo];
-
-}
-
 
 /**
  *  创建navigationBarButtonItem
  */
 -(void)configNaviBar
 {
-    CYButton *jump = [self buttonWithTitle:@"1/100" imageName:@"Answer_jump" highImageName:nil target:self action:@selector(jump:)];
-    jump.frame = CGRectMake(__kScreenWidth - 60 * 3 - 10, 0, 65, 44);
+    CYButton *jump = [self buttonWithTitle:@"1/100" imageName:@"Answer_jump" highImageName:nil target:self action:@selector(jump)];
+    jump.frame = CGRectMake(__kScreenWidth - 60 * 3 - 10, 0, 55, 44);
     jump.titleEdgeInsets = UIEdgeInsetsMake(0, -3, -20, 0);
     jump.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -40);
     self.jumpBtn = jump;
     UIBarButtonItem *itemJump = [[UIBarButtonItem alloc]initWithCustomView:jump];
 
-    CYButton *mode = [self buttonWithTitle:@"答题模式" imageName:@"Answer_mode" highImageName:@"Answer_mode_sel" target:self action:@selector(changeMode:)];
+    CYButton *mode = [self buttonWithTitle:@"答题模式" imageName:@"Answer_mode" highImageName:@"Answer_mode_sel" target:self action:@selector(changeMode)];
     mode.frame = CGRectMake(__kScreenWidth - 50 * 2, 0, 65, 44);
     [mode setTitle:@"开挂模式" forState:UIControlStateSelected];
     mode.titleEdgeInsets = UIEdgeInsetsMake(0, -20, -20, 0);
@@ -175,80 +251,87 @@ static NSString *const ID = @"cell";
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
-/**
- *  获得题目信息
- */
--(void)configQuestionInfo
-{
-    /*接口地址：http://api2.juheapi.com/jztk/query
-    支持格式：json
-    请求方式：get post
-    请求示例：http://api2.juheapi.com/jztk/query?subject=1&model=c1&key=您申请的appKey&testType=rand
-     
-     {
-     "error_code": 0,
-     "reason": "ok",
-     "result": [
-     {
-     "id": 12,
-     "question": "这个标志是何含义？",//问题
-     "answer": "4",//答案
-     "item1": "前方40米减速",//选项，当内容为空时表示判断题正确选项
-     "item2": "最低时速40公里",//选项，当内容为空时表示判断题错误选项
-     "item3": "限制40吨轴重",
-     "item4": "限制最高时速40公里",
-     "explains": "限制最高时速40公里：表示该标志至前方限制速度标志的路段内，机动车行驶速度不得超过标志所示数值。此标志设在需要限制车辆速度的路段的起点。以图为例：限制行驶时速不得超过40公里。",//答案解释
-     "url": "http://images.juheapi.com/jztk/c1c2subject1/12.jpg"//图片url
-     }
-     ]
-     }
 
-     */
-    //1.请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    //2.拼接请求参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"subject"] = @(1);
-    params[@"model"] = @"c1";
-    params[@"key"] = @"aa4303492756274d1c763688bac1883c";
-    params[@"testType"] = @"rand";
-    //3.发送请求
-    [mgr GET:@"http://api2.juheapi.com/jztk/query" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-       //将微博字典数组转为微博模型数组
-        CYLog(@"%@",responseObject);
-        NSArray *newQuestions = [CYQuestionModel objectArrayWithKeyValuesArray:responseObject[@"result"]];
-        NSMutableArray *newFrames = [NSMutableArray array];
-        for (CYQuestionModel *model in newQuestions) {
-            CYQuestionFrame *f = [[CYQuestionFrame alloc]init];
-            f.questionMode = model;
-            [newFrames addObject:f];
-        }
-        self.questionFrames = newFrames;
-        //刷新表格
-        [self.collectionView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        CYLog(@"请求失败 ---- %@",error);
-    }];
-}
 #pragma mark - 添加3个按钮事件
 
+-(void)jump
+{
+    if (self.isShowingJumpView == NO) {
+        self.isShowingJumpView = YES;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.jumpCollectionView.y = 64 + 70;
+            self.jumpTopView.y = 64;
+            self.topCover.y = 0;
+        }];
+    } else {
+        self.isShowingJumpView = NO;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.jumpCollectionView.y = __kScreenHeight + 64 + 70;
+            self.jumpTopView.y = __kScreenHeight + 64;
+            self.topCover.y = __kScreenHeight;
+        }];
+    }
+}
+-(void)changeMode
+{
+
+}
+/**
+ *  收藏按钮
+ */
+-(void)collection:(CYButton *)collectionBtn
+{
+    self.collectionBtn.selected = !collectionBtn.selected;
+    CYQuestionFrame *modelFrame = self.questionFrames[self.indexPath.item];
+    if (self.collectionBtn.selected) {
+        //更换标题的时候内边距也需要改变
+        CGFloat width = [@"已收藏" boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
+        self.collectionBtn.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -width - 15);
+        modelFrame.questionMode.isCollection = YES;
+    }else{
+        self.collectionBtn.selected = NO;
+        self.collectionBtn.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -41);
+        modelFrame.questionMode.isCollection = NO;
+    }
+
+    if (modelFrame.questionMode.isCollection) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //存储收藏的题目到沙盒文件中
+            [CYSaveQuestionModelTool saveQuestionModel:modelFrame];
+        });
+    }else{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //存储收藏的题目到沙盒文件中
+            [CYSaveQuestionModelTool deleteQuestionModel:modelFrame];
+        });
+    }
+}
+
+/** 滚动结束的时候会调用此方法，这时才刷新收藏按钮的UI */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView == self.collectionView) {
+        [self refreshJumpBtnAndCollectionBtn];
+    }
+}
+- (void)refreshJumpBtnAndCollectionBtn {
+    CYQuestionFrame *modelFrame = self.questionFrames[self.indexPath.item];
+    // 1、根据是否收藏,改变界面收藏按钮的显示。在拖拽结束后才执行。
+    if (modelFrame.questionMode.isCollection) {
+        // 更换标题的时候，内边距的值也变化一下
+        self.collectionBtn.selected = YES;
+        CGFloat width = [@"已收藏" boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
+        self.collectionBtn.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -width - 15);
+    } else {
+        self.collectionBtn.selected = NO;
+        self.collectionBtn.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -41);
+    }
+
+}
+#pragma mark - 保存数据
 
 
-#pragma mark - CYAnswerView的代理
-//-(void)CYAnswerViewDidAnswerCorrectly:(CYAnswerView *)CYAnswerView
-//{
-//    CGPoint offset = self.collectionView.contentOffset;
-//    offset.x += __kScreenWidth;
-////    [self.collectionView reloadData];
-//    [self.collectionView setContentOffset:offset animated:YES];
-//
-//}
-//
-//-(void)CYAnswerViewDidAnswerWrong:(CYAnswerView *)CYAnswerView
-//{
-//
-//
-//
-//}
+
+
+
 
 @end

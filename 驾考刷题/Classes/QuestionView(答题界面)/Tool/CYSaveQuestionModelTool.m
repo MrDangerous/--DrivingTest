@@ -7,22 +7,60 @@
 //
 
 #import "CYSaveQuestionModelTool.h"
+#import "CYQuestionFrame.h"
 #import "CYQuestionModel.h"
-#define QuestionModelPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"questionModel.archive"]
+//收藏表情的存储路径
+#define ModelFramePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"modelFrame.archive"]
 @implementation CYSaveQuestionModelTool
-//+(void)saveQuestionModel:(CYQuestionModel *)questionModel
-//{
-//    //自定义对象的存储必须用NSKeyedArchiver，不再有什么writeToFile方法
-//
-//    [NSKeyedArchiver archiveRootObject:questionModel toFile:QuestionModelPath];
-//
-//}
-//
-//+(CYQuestionModel *)questionModel
-//{
-//    //加载模型
-//    CYQuestionModel *questionModel = [NSKeyedUnarchiver unarchiveObjectWithFile:QuestionModelPath];
-//    
-//    return questionModel;
-//}
+
+static NSMutableArray *_modelFrames;
+/**
+ *  类方法，只会调用一次
+ */
++ (void)initialize
+{
+    _modelFrames = [NSKeyedUnarchiver unarchiveObjectWithFile:ModelFramePath];
+    if (_modelFrames == nil) {
+        _modelFrames = [NSMutableArray array];
+    }
+
+}
+
+
++ (void)saveQuestionModel:(CYQuestionFrame *)modelFrame
+{
+    //删除重复的表情
+    for (CYQuestionFrame *f in _modelFrames) {
+        if (f.questionMode.idstr == modelFrame.questionMode.idstr) {
+            [_modelFrames removeObject:f];
+            break;
+        }
+    }
+    //将题目模型放在数组的最前面
+    [_modelFrames insertObject:modelFrame atIndex:0];
+    //将所有题目数据写入沙盒
+    [NSKeyedArchiver archiveRootObject:_modelFrames toFile:ModelFramePath];
+
+}
+
++ (void)deleteQuestionModel:(CYQuestionFrame *)modelFrame
+{
+    //删除重复的表情
+    for (CYQuestionFrame *f in _modelFrames) {
+        if (f.questionMode.idstr == modelFrame.questionMode.idstr) {
+            [_modelFrames removeObject:f];
+            break;
+        }
+    }
+    //将所有题目数据写入沙盒
+    [NSKeyedArchiver archiveRootObject:_modelFrames toFile:ModelFramePath];
+}
+
+/**
+ *  返回装着的模型题目
+ */
++ (NSArray *)modelFrames
+{
+    return _modelFrames;
+}
 @end

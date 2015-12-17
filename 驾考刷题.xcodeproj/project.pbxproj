@@ -61,6 +61,7 @@
 		18D8C3AA1C1AEC6C00967B02 /* CYJumpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8C3A81C1AEC6C00967B02 /* CYJumpCell.m */; };
 		18D8C3AB1C1AEC6C00967B02 /* CYJumpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D8C3A91C1AEC6C00967B02 /* CYJumpCell.xib */; };
 		18D8C3B11C1AF9E800967B02 /* CYJumpToCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */; };
+		18D963741C22FA48002CCC73 /* question.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D963731C22FA48002CCC73 /* question.plist */; };
 		18DA894A1C13D44400B4631D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA89491C13D44400B4631D /* main.m */; };
 		18DA894D1C13D44400B4631D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA894C1C13D44400B4631D /* AppDelegate.m */; };
 		18DA89551C13D44400B4631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DA89541C13D44400B4631D /* Assets.xcassets */; };
@@ -220,6 +221,7 @@
 		18D8C3A91C1AEC6C00967B02 /* CYJumpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CYJumpCell.xib; path = ../Controller/CYJumpCell.xib; sourceTree = "<group>"; };
 		18D8C3AF1C1AF9E800967B02 /* CYJumpToCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYJumpToCollectionView.h; sourceTree = "<group>"; };
 		18D8C3B01C1AF9E800967B02 /* CYJumpToCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYJumpToCollectionView.m; sourceTree = "<group>"; };
+		18D963731C22FA48002CCC73 /* question.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = question.plist; sourceTree = "<group>"; };
 		18DA89451C13D44400B4631D /* 驾考刷题.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "驾考刷题.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DA89491C13D44400B4631D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DA894B1C13D44400B4631D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 		18DA89481C13D44400B4631D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18D963731C22FA48002CCC73 /* question.plist */,
 				18D8C1051C19B94A00402F6A /* products */,
 				18DA89541C13D44400B4631D /* Assets.xcassets */,
 				18DA89561C13D44400B4631D /* LaunchScreen.storyboard */,
@@ -1141,6 +1144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D963741C22FA48002CCC73 /* question.plist in Resources */,
 				18D8C1191C19B94A00402F6A /* caipiao@2x.png in Resources */,
 				18D8C11A1C19B94A00402F6A /* cloudphotos@2x.png in Resources */,
 				18D8C1041C19B2F800402F6A /* CYthirdSubjectViewController.xib in Resources */,

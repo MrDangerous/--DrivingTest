@@ -12,6 +12,12 @@
 #import "CYLeftDrawerController.h"
 #import "CYSettingViewController.h"
 #import "CYQuestionViewController.h"
+#import "AFNetworking.h"
+#import "CYQuestionFrame.h"
+#import "CYQuestionModel.h"
+#import "MJExtension.h"
+#import "MBProgressHUD+MJ.h"
+#import "CYSaveQuestionModelTool.h"
 @interface CYFirstSubjectViewController ()<UIScrollViewDelegate>
 
 //滚动图片3个
@@ -34,10 +40,6 @@
     [self setRightBarButton];
     //设置滚动图片
     [self setSCrollImage];
-
-
-
-
 }
 /**
  *  滚动图片实现
@@ -99,7 +101,6 @@
 
 }
 
-
 #pragma mark - 设置右边设置
 -(void)setRightBarButton
 {
@@ -129,8 +130,6 @@
     CGFloat offsetX = page * self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
-
-
 
 /**
  *  实现scrollView的代理方法
@@ -166,18 +165,76 @@
 
 #pragma mark - 做题按钮事件
 - (IBAction)orderTraing:(id)sender {
+    //从plist中加载
     CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"question.plist" ofType:nil];
+    NSDictionary *newQuestion = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *newQuestionDict = newQuestion[@"result"];
+
+    NSMutableArray *newQuestionMode = [NSMutableArray array];
+    for (NSDictionary *dict in newQuestionDict) {
+        CYQuestionModel *model = [CYQuestionModel modelWithDict:dict];
+        [newQuestionMode addObject:model];
+    }
+
+    NSMutableArray *newFrames = [NSMutableArray array];
+    for (CYQuestionModel *model in newQuestionMode) {
+        CYQuestionFrame *f = [[CYQuestionFrame alloc]init];
+        f.questionMode = model;
+        [newFrames addObject:f];
+    }
+    questionVc.questionFrames = newFrames;
+
     [self.navigationController pushViewController:questionVc animated:YES];
 }
 
 - (IBAction)randTraing:(id)sender {
+    CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
+        //1.请求管理者
+        AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+        //2.拼接请求参数
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        params[@"subject"] = @(1);
+        params[@"model"] = @"c1";
+        params[@"key"] = @"aa4303492756274d1c763688bac1883c";
+        params[@"testType"] = @"rand";
+        //3.发送请求
+        [mgr GET:@"http://api2.juheapi.com/jztk/query" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//            NSString *filePath = @"/Users/apple/desktop/question.plist";
+//            [responseObject writeToFile:filePath atomically:YES];
+           //将微博字典数组转为微博模型数组
+            NSArray *newQuestions = [CYQuestionModel objectArrayWithKeyValuesArray:responseObject[@"result"]];
+    
+            NSMutableArray *newFrames = [NSMutableArray array];
+            for (CYQuestionModel *model in newQuestions) {
+                CYQuestionFrame *f = [[CYQuestionFrame alloc]init];
+                f.questionMode = model;
+                [newFrames addObject:f];
+            }
+            questionVc.questionFrames = newFrames;
+            [MBProgressHUD showSuccess:@"加载成功"];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [MBProgressHUD showError:@"加载失败"];
+        }];
+
+    [self.navigationController pushViewController:questionVc animated:YES];
 }
 
 - (IBAction)myWrong:(id)sender {
-    
+
+
 }
 
 - (IBAction)myCollect:(id)sender {
+    //从沙盒中加载
+    CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
+    questionVc.questionFrames = [CYSaveQuestionModelTool modelFrames];
+    if (questionVc.questionFrames.count) {
+        [self.navigationController pushViewController:questionVc animated:YES];
+    }else{
+        [MBProgressHUD showError:@"没有收藏数据"];
+
+    }
 }
 
 @end

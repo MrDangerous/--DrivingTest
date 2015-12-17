@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CYQuestionModel.h"
+#import "CYQuestionFrame.h"
 @interface CYSaveQuestionModelTool : NSObject
-///**
-// *  存储题目信息
-// *
-// *  @param questionModel 题目模型
-// */
-//+(void)saveQuestionModel:(CYQuestionModel *)questionModel;
-///**
-// *  返回题目信息
-// *
-// *  @return 题目模型
-// */
-//+(CYQuestionModel *)questionModel;
+/**
+ *  存储题目信息
+ *
+ *  @param questionModel 题目模型
+ */
++(void)saveQuestionModel:(CYQuestionFrame *)modelFrame;
+/**
+ *  删除题目信息
+ */
++ (void)deleteQuestionModel:(CYQuestionFrame *)modelFrame;
+/**
+ *  返回题目信息
+ *
+ *  @return 题目模型
+ */
++(NSArray *)modelFrames;
+
 @end

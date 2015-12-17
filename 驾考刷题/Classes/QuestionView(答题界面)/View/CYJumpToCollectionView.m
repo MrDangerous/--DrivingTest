@@ -18,7 +18,14 @@
 
 @implementation CYJumpToCollectionView
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self = [[[NSBundle mainBundle] loadNibNamed:@"CYJumpToCollectionView" owner:self options:nil] lastObject];
+    }
+    return self;
+}
 
 
 @end

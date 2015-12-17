@@ -160,6 +160,14 @@
         //禁用按钮
         [self changeButtonEnableStateToNO];
 }
+/**
+ *  移除通知
+ */
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
 
 //显示正确答案
 -(void)showCorrectAnswer

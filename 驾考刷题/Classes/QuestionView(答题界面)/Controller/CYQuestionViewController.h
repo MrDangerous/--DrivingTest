@@ -10,4 +10,9 @@
 
 @interface CYQuestionViewController : UIViewController
 
+/**
+ *  题目数组（里面放的都是CYQuestionFrame数组，一个数组就代表一道题目）,这些题目数组的来源是不一定的所以要放在这里给按钮提供接口
+ */
+@property (nonatomic, strong) NSArray *questionFrames;
+
 @end
