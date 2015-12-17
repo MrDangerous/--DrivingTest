@@ -101,20 +101,6 @@
     return _jumpTopView;
 }
 
-#pragma mark - 系统方法
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-
-    [self configCollectionView];
-
-    //刷新表格
-    [self.collectionView reloadData];
-    //配置导航栏
-    [self configNaviBar];
-
-}
-
 //主界面的大的collectionView
 static NSString *const ID = @"cell";
 -(void)configCollectionView
@@ -137,6 +123,19 @@ static NSString *const ID = @"cell";
     [self.view addSubview:collectionView];
 }
 
+#pragma mark - 系统方法
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self configCollectionView];
+
+    //刷新表格
+    [self.collectionView reloadData];
+    
+    //配置导航栏
+    [self configNaviBar];
+
+}
 
 
 #pragma mark collectionView数据源代理
@@ -194,12 +193,7 @@ static NSString *const ID = @"cell";
     [self.collectionView reloadData];
     [self.collectionView setContentOffset:offset animated:YES];
    }
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // 从这里拿到的下标才是最准确的
-    NSLog(@"contentOffset=(%f, %f)", self.collectionView.contentOffset.x, self.collectionView.contentOffset.y);
 
-
-}
 
 /**
  *  创建navigationBarButtonItem
@@ -253,7 +247,9 @@ static NSString *const ID = @"cell";
 }
 
 #pragma mark - 添加3个按钮事件
-
+/**
+ *  弹出选题界面
+ */
 -(void)jump
 {
     if (self.isShowingJumpView == NO) {
@@ -272,6 +268,9 @@ static NSString *const ID = @"cell";
         }];
     }
 }
+/**
+ *  改变答题模式
+ */
 -(void)changeMode
 {
 
@@ -306,6 +305,10 @@ static NSString *const ID = @"cell";
         });
     }
 }
+
+
+
+#pragma mark - 私有方法
 
 /** 滚动结束的时候会调用此方法，这时才刷新收藏按钮的UI */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

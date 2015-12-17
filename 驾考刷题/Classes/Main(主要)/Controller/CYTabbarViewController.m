@@ -12,7 +12,6 @@
 #import "CYthirdSubjectViewController.h"
 #import "CYForthSubjectViewController.h"
 #import "CYNavigationViewController.h"
-#import "CYTabBar.h"
 #import "MMDrawerController.h"
 
 @interface CYTabbarViewController ()

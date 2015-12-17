@@ -9,6 +9,7 @@
 #import "CYAnswerView.h"
 #import "CYQuestionModel.h"
 @interface CYAnswerView()
+//A选项相关按钮
 @property (weak, nonatomic) IBOutlet UILabel *labelA;
 @property (weak, nonatomic) IBOutlet UIButton *buttonA;
 @property (weak, nonatomic) IBOutlet UIButton *btnA;
@@ -29,14 +30,12 @@
 @property (weak, nonatomic) IBOutlet UIView *optionC;
 @property (weak, nonatomic) IBOutlet UIView *optionD;
 
-//三条线
+//三条分割线
 @property (weak, nonatomic) IBOutlet UIView *lineBC;
 @property (weak, nonatomic) IBOutlet UIView *lineDX;
 @property (weak, nonatomic) IBOutlet UIView *lineCD;
 
 @end
-
-
 
 @implementation CYAnswerView
 -(instancetype)init
@@ -48,6 +47,8 @@
     }
     return self;
 }
+
+#pragma mark - 数据的初始化
 /**
  *  传入数据模型，给控件一一赋值
  */

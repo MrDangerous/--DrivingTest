@@ -18,37 +18,13 @@
 
 @implementation CYHeaderView
 
-/**
- *  实现scrollView的代理方法
- */
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
++(instancetype)headerView
 {
-    //计算当前滚到了第几页
-    CGFloat offSetX = scrollView.contentOffset.x;
-    //一半过去就可以换页
-    offSetX = offSetX + (scrollView.frame.size.width * 0.5);
-
-    int page = offSetX / scrollView.frame.size.width;
-    self.pageControl.currentPage = page;
-
+    CYHeaderView *headerView = [[[NSBundle mainBundle]loadNibNamed:@"CYHeadView" owner:nil options:nil]lastObject];
+    return headerView;
 }
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    //停止计时器
-    [self.timer invalidate];
-    //因为计时器已经废了，所以设置为nil
-    self.timer = nil;
 
-}
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    //重新开启计时器
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(scrollImage) userInfo:nil repeats:YES];
-    //创建一个消息循环
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    //改变优先级
-    [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
-}
+#pragma mark - scrollView相关
 -(void)awakeFromNib
 {
     CGFloat imgW = 320;
@@ -88,7 +64,6 @@
     //改变优先级
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 
-
 }
 /**
  *  自动滚动图片
@@ -107,10 +82,37 @@
 }
 
 
-+(instancetype)headerView
+#pragma mark - scrollView的代理方法
+/**
+ *  实现scrollView的代理方法
+ */
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CYHeaderView *headerView = [[[NSBundle mainBundle]loadNibNamed:@"CYHeadView" owner:nil options:nil]lastObject];
-    return headerView;
+    //计算当前滚到了第几页
+    CGFloat offSetX = scrollView.contentOffset.x;
+    //一半过去就可以换页
+    offSetX = offSetX + (scrollView.frame.size.width * 0.5);
+
+    int page = offSetX / scrollView.frame.size.width;
+    self.pageControl.currentPage = page;
+
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    //停止计时器
+    [self.timer invalidate];
+    //因为计时器已经废了，所以设置为nil
+    self.timer = nil;
+
+}
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    //重新开启计时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(scrollImage) userInfo:nil repeats:YES];
+    //创建一个消息循环
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    //改变优先级
+    [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 @end

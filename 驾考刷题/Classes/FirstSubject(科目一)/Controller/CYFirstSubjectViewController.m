@@ -20,7 +20,7 @@
 #import "CYSaveQuestionModelTool.h"
 @interface CYFirstSubjectViewController ()<UIScrollViewDelegate>
 
-//滚动图片3个
+//滚动图片2个控件
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 /**
@@ -163,7 +163,10 @@
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
-#pragma mark - 做题按钮事件
+#pragma mark - 科目一的按钮事件
+/**
+ *  顺序练习
+ */
 - (IBAction)orderTraing:(id)sender {
     //从plist中加载
     CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
@@ -187,7 +190,9 @@
 
     [self.navigationController pushViewController:questionVc animated:YES];
 }
-
+/**
+ *  随机练习
+ */
 - (IBAction)randTraing:(id)sender {
     CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];
         //1.请求管理者
@@ -219,12 +224,16 @@
 
     [self.navigationController pushViewController:questionVc animated:YES];
 }
-
+/**
+ *  我的错题
+ */
 - (IBAction)myWrong:(id)sender {
 
 
 }
-
+/**
+ *  我的收藏按钮
+ */
 - (IBAction)myCollect:(id)sender {
     //从沙盒中加载
     CYQuestionViewController *questionVc = [[CYQuestionViewController alloc]init];

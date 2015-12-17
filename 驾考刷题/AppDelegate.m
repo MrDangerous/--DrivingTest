@@ -36,7 +36,7 @@
     MMDrawerController *drawerController = [[MMDrawerController alloc]initWithCenterViewController:tabarVc leftDrawerViewController:leftNC];
 
     //设置抽屉抽出的宽度
-    drawerController.maximumLeftDrawerWidth = 250;
+    drawerController.maximumLeftDrawerWidth = __kScreenWidth - 80;
     //滑动手势开关抽屉
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
