@@ -68,7 +68,7 @@
     if (_jumpCollectionView == nil) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-        layout.itemSize =CGSizeMake((__kScreenWidth - 20) / 6 , (__kScreenWidth - 20) / 6);
+        layout.itemSize =CGSizeMake((__kScreenWidth - 20) / 5 , (__kScreenWidth - 20) / 5);
         layout.minimumInteritemSpacing = 0;
         layout.minimumLineSpacing = 0;
         UICollectionView *jumpCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64 + 70 + __kScreenHeight, __kScreenWidth, __kScreenHeight - 64 - 70) collectionViewLayout:layout];
@@ -77,7 +77,7 @@
         jumpCollectionView.backgroundColor = [UIColor whiteColor];
         jumpCollectionView.scrollEnabled = YES;
         jumpCollectionView.showsVerticalScrollIndicator = YES;
-        jumpCollectionView.contentSize = CGSizeMake(0, (self.questionFrames.count / 6 + 2) * (__kScreenWidth/6));
+        jumpCollectionView.contentSize = CGSizeMake(0, (self.questionFrames.count / 5 + 2) * (__kScreenWidth/5));
         [jumpCollectionView registerNib:[UINib nibWithNibName:@"CYJumpCell" bundle:nil] forCellWithReuseIdentifier:@"CYJumpCell"];
         [self.navigationController.view addSubview:jumpCollectionView];
         _jumpCollectionView = jumpCollectionView;

@@ -27,12 +27,12 @@
     if (questionMode.url == nil || [questionMode.url isEqualToString:@""]) {
         answerY = CGRectGetMaxY(self.titleLabelF) + QuestionCellBorderW;
     } else {
-        CGFloat imageX = QuestionCellBorderW;
-        CGFloat imageY = CGRectGetMaxY(self.titleLabelF) + QuestionCellBorderW;
-        CGFloat imageW = __kScreenWidth - 2 * QuestionCellBorderW;
-        CGFloat imageH = 150;
+        CGFloat imageX = QuestionCellBorderW * 4;
+        CGFloat imageY = CGRectGetMaxY(self.titleLabelF) + QuestionCellBorderW * 2;
+        CGFloat imageW = __kScreenWidth - 2 * QuestionCellBorderW * 4;
+        CGFloat imageH = 100;
         self.questionImageF = CGRectMake(imageX, imageY, imageW, imageH);
-        answerY = CGRectGetMaxY(self.questionImageF) + QuestionCellBorderW;
+        answerY = CGRectGetMaxY(self.questionImageF) + QuestionCellBorderW * 2;
     }
 
     /** 选项 */

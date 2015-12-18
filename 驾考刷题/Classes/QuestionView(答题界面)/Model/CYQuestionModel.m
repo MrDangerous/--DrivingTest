@@ -19,7 +19,7 @@
  */
 -(void)setQuestion:(NSString *)question
 {
-    _question =[NSString stringWithFormat:@"%ld.%@",(long)self.id,question];
+    _question =[NSString stringWithFormat:@"  %ld. %@",(long)self.id,question];
 
 }
 + (instancetype)modelWithDict:(NSDictionary *)dict {

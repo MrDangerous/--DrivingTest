@@ -91,7 +91,7 @@
     self.answerView.frame = questionFrame.answerViewF;
     self.answerView.questionMode = questionMode;
 
-    CYLog(@"CYQuestionCell--------------%@",questionMode.answer);
+    CYLog(@"答案是--------------第%@个选项",questionMode.answer);
 }
 
 @end

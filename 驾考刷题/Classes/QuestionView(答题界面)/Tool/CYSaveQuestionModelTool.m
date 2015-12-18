@@ -29,7 +29,7 @@ static NSMutableArray *_modelFrames;
 
 + (void)saveQuestionModel:(CYQuestionFrame *)modelFrame
 {
-    //删除重复的表情
+    //删除重复的题目
     for (CYQuestionFrame *f in _modelFrames) {
         if (f.questionMode.idstr == modelFrame.questionMode.idstr) {
             [_modelFrames removeObject:f];
@@ -45,7 +45,7 @@ static NSMutableArray *_modelFrames;
 
 + (void)deleteQuestionModel:(CYQuestionFrame *)modelFrame
 {
-    //删除重复的表情
+    //删除重复的题目
     for (CYQuestionFrame *f in _modelFrames) {
         if (f.questionMode.idstr == modelFrame.questionMode.idstr) {
             [_modelFrames removeObject:f];

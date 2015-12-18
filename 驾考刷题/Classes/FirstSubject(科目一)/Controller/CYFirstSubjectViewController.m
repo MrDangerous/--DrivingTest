@@ -218,11 +218,11 @@
             }
             questionVc.questionFrames = newFrames;
             [MBProgressHUD showSuccess:@"加载成功"];
+            [self.navigationController pushViewController:questionVc animated:YES];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [MBProgressHUD showError:@"加载失败"];
         }];
 
-    [self.navigationController pushViewController:questionVc animated:YES];
 }
 /**
  *  我的错题
